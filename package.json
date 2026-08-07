@@ -1,0 +1,20 @@
+{
+  "name": "deepseek-1m-context-benchmark-release-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://chat-deep.ai/research/deepseek-1m-context-benchmark/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chatdeepai/deepseek-1m-context-benchmark.git"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate:skeleton": "node tools/validate-public-repo.mjs --mode skeleton --root .",
+    "validate:ready": "node tools/validate-public-repo.mjs --mode ready --root ."
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

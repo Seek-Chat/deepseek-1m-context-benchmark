@@ -1,0 +1,30 @@
+{
+  "manifest_schema_version": "1.0.0",
+  "protocol_id": "deepseek-v4-long-context-retrieval-v1.1.0",
+  "protocol_version": "1.1.0",
+  "validator_schema_version": "1.0.0",
+  "mode": "full",
+  "expected_result_count": 344,
+  "discovered_result_count": 344,
+  "integrity_valid": true,
+  "pilot_accepted": false,
+  "full_run_complete": true,
+  "files": {
+    "results.csv": {
+      "bytes": 422666,
+      "sha256": "c788a45e7293d9c7bdf989ae70e22ea7af2d6c9d5d459b4316c318230177d688"
+    },
+    "results.jsonl": {
+      "bytes": 821073,
+      "sha256": "7a63eecadb63229db64361432344c7775134c64de3147f68fd2168569079461d"
+    },
+    "summary.json": {
+      "bytes": 40300,
+      "sha256": "0ffd9b6f6493675cb2384997924507e920da6d3cc5a07591dff2363cad983a68"
+    },
+    "validation-report.json": {
+      "bytes": 44448,
+      "sha256": "52e8bd9a4b19c7ed4ab061778ea4e79a43c1b926a3eceb9c01822294e34a4e07"
+    }
+  }
+}

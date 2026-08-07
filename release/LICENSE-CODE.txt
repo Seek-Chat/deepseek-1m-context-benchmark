@@ -1,0 +1,1 @@
+Publication-pipeline code is provided under the MIT License.

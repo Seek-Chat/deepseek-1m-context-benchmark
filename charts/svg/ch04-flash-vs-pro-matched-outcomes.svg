@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Flash vs Pro Matched Outcomes</title>
+<desc id="desc">Paired exact-match outcomes for Flash and Pro.</desc>
+<rect width="1600" height="900" fill="#f8fafc"/>
+<rect x="40" y="40" width="1520" height="820" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+<text x="800" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Flash vs Pro Matched Outcomes</text>
+<text x="800" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#475569">One outcome for each of 144 matched base fixtures</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#e2e8f0"/>
+<text x="130" y="757.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">0</text>
+<line x1="150" y1="638.0" x2="1530" y2="638.0" stroke="#e2e8f0"/>
+<text x="130" y="645.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">14</text>
+<line x1="150" y1="526.0" x2="1530" y2="526.0" stroke="#e2e8f0"/>
+<text x="130" y="533.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">28</text>
+<line x1="150" y1="414.0" x2="1530" y2="414.0" stroke="#e2e8f0"/>
+<text x="130" y="421.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">42</text>
+<line x1="150" y1="302.0" x2="1530" y2="302.0" stroke="#e2e8f0"/>
+<text x="130" y="309.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">56</text>
+<line x1="150" y1="190.0" x2="1530" y2="190.0" stroke="#e2e8f0"/>
+<text x="130" y="197.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">69</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#64748b" stroke-width="2"/>
+<text x="322.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">BOTH PASS</text>
+<rect x="276.5" y="250.0" width="87.0" height="500.0" rx="6" fill="#7c3aed"/>
+<text x="320.0" y="240.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">62</text>
+<text x="667.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">FLASH ONLY</text>
+<rect x="621.5" y="677.4" width="87.0" height="72.6" rx="6" fill="#7c3aed"/>
+<text x="665.0" y="667.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">9</text>
+<text x="1012.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">PRO ONLY</text>
+<rect x="966.5" y="596.8" width="87.0" height="153.2" rx="6" fill="#7c3aed"/>
+<text x="1010.0" y="586.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">19</text>
+<text x="1357.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">BOTH FAIL</text>
+<rect x="1311.5" y="314.5" width="87.0" height="435.5" rx="6" fill="#7c3aed"/>
+<text x="1355.0" y="304.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">54</text>
+<rect x="90" y="815" width="22" height="22" rx="4" fill="#7c3aed"/>
+<text x="122" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">MATCHED PAIRS</text>
+<text x="1510" y="833" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#64748b">COMPLETE PAIRS N=144</text>
+</svg>

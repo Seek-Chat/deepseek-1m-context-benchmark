@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Dated Known-Usage Cost by Analysis Role</title>
+<desc id="desc">Known-usage cost sums by analysis role; incomplete groups are not full-group upper bounds.</desc>
+<rect width="1600" height="900" fill="#f8fafc"/>
+<rect x="40" y="40" width="1520" height="820" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+<text x="800" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Dated Known-Usage Cost by Analysis Role</text>
+<text x="800" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#475569">Observed-row sums using the 2026-08-06 snapshot</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#e2e8f0"/>
+<text x="130" y="757.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">$0</text>
+<line x1="150" y1="638.0" x2="1530" y2="638.0" stroke="#e2e8f0"/>
+<text x="130" y="645.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">$10</text>
+<line x1="150" y1="526.0" x2="1530" y2="526.0" stroke="#e2e8f0"/>
+<text x="130" y="533.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">$20</text>
+<line x1="150" y1="414.0" x2="1530" y2="414.0" stroke="#e2e8f0"/>
+<text x="130" y="421.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">$30</text>
+<line x1="150" y1="302.0" x2="1530" y2="302.0" stroke="#e2e8f0"/>
+<text x="130" y="309.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">$40</text>
+<line x1="150" y1="190.0" x2="1530" y2="190.0" stroke="#e2e8f0"/>
+<text x="130" y="197.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">$50</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#64748b" stroke-width="2"/>
+<text x="380.0" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">PILOT N20/20</text>
+<rect x="334.0" y="736.1" width="87.0" height="13.9" rx="6" fill="#f97316"/>
+<text x="377.5" y="726.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">$1.241</text>
+<text x="840.0" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">PRIMARY N288/288</text>
+<rect x="794.0" y="373.8" width="87.0" height="376.2" rx="6" fill="#f97316"/>
+<text x="837.5" y="363.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">$33.589</text>
+<text x="1300.0" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">INDIA N36/36</text>
+<rect x="1254.0" y="693.1" width="87.0" height="56.9" rx="6" fill="#f97316"/>
+<text x="1297.5" y="683.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">$5.083</text>
+<rect x="90" y="815" width="22" height="22" rx="4" fill="#f97316"/>
+<text x="122" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">KNOWN-USAGE USD</text>
+<text x="1510" y="833" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#64748b">FULL UPPER BOUND ONLY WHERE COST COVERAGE N=ATTEMPTS</text>
+</svg>

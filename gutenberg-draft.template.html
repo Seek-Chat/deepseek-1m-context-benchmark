@@ -1,0 +1,285 @@
+<!-- DeepSeek 1M publication template; release 1.0.0; no body H1 -->
+
+<!-- wp:paragraph {"className":"deepseek-benchmark-answer"} -->
+<p class="deepseek-benchmark-answer">From 2026-08-06T20:17:02.706Z to 2026-08-07T00:07:44.737Z, the run requested deepseek-v4-flash and deepseek-v4-pro and recorded returned model IDs deepseek-v4-flash and deepseek-v4-pro. All 344 planned attempts produced terminal records. In the 288-case U.S. primary matrix, Flash returned <strong>71/144</strong> strict exact answers (49.3%) and Pro <strong>81/144</strong> (56.3%). Primary end-to-end latency was 12.75 s at p50 and 162.29 s at p95 (n=288). The dated all-role cost estimate was a cache-miss upper bound of USD 39.913229 with complete coverage (344/344 rows). Synthetic strict-JSON tasks are not general model quality.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This independent benchmark tested exact retrieval and synthesis at provider-counted prompts from 32K to approximately 950K tokens. It used deterministic synthetic English records, one paid attempt per case, streaming Chat Completions, non-thinking mode, temperature 0, JSON Output, and a strict family-specific grader. Download the <a href="{{RELEASE_URL}}">versioned public release</a> or inspect the <a href="{{REPOSITORY_URL}}">reproducible repository</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">DeepSeek 1M Context Benchmark Results</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Item</th><th>Frozen design or observed release</th></tr></thead><tbody><tr><td>Protocol</td><td>deepseek-v4-long-context-retrieval-v1.1.0</td></tr><tr><td>Models</td><td>deepseek-v4-flash, deepseek-v4-pro</td></tr><tr><td>Task families</td><td>Single record, multi-hop join, latest version, event ordering</td></tr><tr><td>Prompt tiers</td><td>32K, 128K, 512K, approximately 950K</td></tr><tr><td>Primary accuracy</td><td>288 cases from us-east-1</td></tr><tr><td>Excluded pilot</td><td>20 calls: 10 per network vantage</td></tr><tr><td>India validation</td><td>36 matched single-record calls from ap-south-1</td></tr><tr><td>Attempts</td><td>One per case; no automatic retry</td></tr><tr><td>Run window</td><td>2026-08-06T20:17:02.706Z to 2026-08-07T00:07:44.737Z</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH00_URL}}" alt="Benchmark design chart showing the three analysis roles and their separate denominators."/><figcaption class="wp-element-caption">Protocol deepseek-v4-long-context-retrieval-v1.1.0; release 1.0.0; 344 terminal rows split into 20 excluded pilot, 288 primary, and 36 India validation rows.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">What DeepSeek officially documents</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DeepSeek's <a href="https://api-docs.deepseek.com/quick_start/pricing/">official Models &amp; Pricing documentation</a> was the frozen source for the tested model IDs, the documented 1M context capacity, the documented 384K maximum output, and dated rates. A context capacity is an input-and-output budget, not proof that a model will retrieve or synthesize every requested detail at every position. This study targeted four returned prompt-token bands: 24K–36K, 110K–140K, 450K–550K, and 850K–980K. The final tier is described as approximately 950K, not one million input tokens. Independently of the model's documented 384K maximum, the study's request contract capped each generated answer at 256 tokens; it did not test long-form maximum output.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The current specification and planning details belong in the <a href="https://chat-deep.ai/docs/deepseek-v4-context-output-limits/">DeepSeek V4 context and output limits guide</a>. This page owns the independent measured benchmark.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Original test methodology</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The corpus generator created deterministic synthetic records with objective answers and no external-knowledge requirement. Flash and Pro received the same unsalted base fixture for each matched primary condition. A deterministic role-and-region prefix separated pilot, primary, U.S., and India request prefixes while keeping the two models paired within a role and vantage.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Operational preflight disclosure</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Before the paid U.S. pilot began, the first Step Functions execution stopped during the S3 result-existence preflight because the execution role lacked the required bucket-list permission. It stopped before any provider POST, so it generated no provider request or provider cost. The role was corrected with least-privilege access, and the same frozen run ID and version were launched under a clearly labeled infrastructure-only retry execution. None of the 20 paid pilot cases were retried, and the event is outside every model-result denominator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><li><strong>Exact single-record retrieval:</strong> find one keyed record and return six exact fields.</li><li><strong>Two-record multi-hop join:</strong> find a source, follow its link, and return the linked record's fields.</li><li><strong>Latest-version conflict resolution:</strong> select the highest numeric version despite corpus order.</li><li><strong>Scattered event ordering:</strong> find four events and return their codes and checksums in sequence order.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Every response had to be one exact JSON object with the frozen keys, values, arrays, and types. No repair prompt or manual correction was allowed. Provider-reported prompt tokens determined tier validity.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Overall V4 Flash vs V4 Pro accuracy</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Model</th><th>Exact</th><th>Rate</th><th>Wilson 95% CI</th><th>Valid JSON</th><th>Field accuracy</th><th>E2E p50</th><th>E2E p95</th><th>Latency n</th><th>Cost coverage</th><th>Dated cost value</th></tr></thead><tbody><tr><td>deepseek-v4-flash</td><td>71/144</td><td>49.3%</td><td>41.3%–57.4%</td><td>144/144</td><td>70.5%</td><td>7.12 s</td><td>84.89 s</td><td>144</td><td>144/144</td><td>USD 8.177713</td></tr><tr><td>deepseek-v4-pro</td><td>81/144</td><td>56.3%</td><td>48.1%–64.1%</td><td>144/144</td><td>73.7%</td><td>15.07 s</td><td>168.28 s</td><td>144</td><td>144/144</td><td>USD 25.411423</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>The strict primary denominator remained 288 even when a request or output failed. There were 136 non-exact primary terminal records; their stages remain in <a href="{{ALL_ATTEMPTS_URL}}">the sanitized attempt dataset</a> and the failure table.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Accuracy by prompt tier</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH01_URL}}" alt="Grouped chart of strict exact-match rate by provider-counted prompt tier for DeepSeek V4 Flash and Pro."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; primary denominator 288, with 36 cases per model at each tier.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Model</th><th>Tier</th><th>Exact</th><th>Rate</th><th>Wilson 95% CI</th><th>E2E p50</th><th>E2E p95</th><th>n</th></tr></thead><tbody><tr><td>deepseek-v4-flash</td><td>128k</td><td>22/36</td><td>61.1%</td><td>44.9%–75.2%</td><td>5.99 s</td><td>7.54 s</td><td>36</td></tr><tr><td>deepseek-v4-flash</td><td>32k</td><td>24/36</td><td>66.7%</td><td>50.3%–79.8%</td><td>1.93 s</td><td>2.62 s</td><td>36</td></tr><tr><td>deepseek-v4-flash</td><td>512k</td><td>15/36</td><td>41.7%</td><td>27.1%–57.8%</td><td>12.39 s</td><td>34.48 s</td><td>36</td></tr><tr><td>deepseek-v4-flash</td><td>950k</td><td>10/36</td><td>27.8%</td><td>15.8%–44.0%</td><td>82.41 s</td><td>91.21 s</td><td>36</td></tr><tr><td>deepseek-v4-pro</td><td>128k</td><td>22/36</td><td>61.1%</td><td>44.9%–75.2%</td><td>12.69 s</td><td>21.51 s</td><td>36</td></tr><tr><td>deepseek-v4-pro</td><td>32k</td><td>26/36</td><td>72.2%</td><td>56.0%–84.2%</td><td>3.89 s</td><td>5.59 s</td><td>36</td></tr><tr><td>deepseek-v4-pro</td><td>512k</td><td>17/36</td><td>47.2%</td><td>32.0%–63.0%</td><td>67.35 s</td><td>124.01 s</td><td>36</td></tr><tr><td>deepseek-v4-pro</td><td>950k</td><td>16/36</td><td>44.4%</td><td>29.5%–60.4%</td><td>158.50 s</td><td>186.19 s</td><td>36</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Accuracy by task family</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH02_URL}}" alt="Grouped chart of strict exact-match rate by retrieval task family for Flash and Pro."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; 36 primary cases per model in each family.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Model</th><th>Family</th><th>Exact</th><th>Rate</th><th>Field accuracy</th></tr></thead><tbody><tr><td>deepseek-v4-flash</td><td>event_ordering</td><td>14/36</td><td>38.9%</td><td>69.4%</td></tr><tr><td>deepseek-v4-flash</td><td>latest_version</td><td>32/36</td><td>88.9%</td><td>94.4%</td></tr><tr><td>deepseek-v4-flash</td><td>multi_hop_join</td><td>0/36</td><td>0.0%</td><td>31.0%</td></tr><tr><td>deepseek-v4-flash</td><td>single_record</td><td>25/36</td><td>69.4%</td><td>89.4%</td></tr><tr><td>deepseek-v4-pro</td><td>event_ordering</td><td>24/36</td><td>66.7%</td><td>80.6%</td></tr><tr><td>deepseek-v4-pro</td><td>latest_version</td><td>30/36</td><td>83.3%</td><td>93.7%</td></tr><tr><td>deepseek-v4-pro</td><td>multi_hop_join</td><td>0/36</td><td>0.0%</td><td>31.7%</td></tr><tr><td>deepseek-v4-pro</td><td>single_record</td><td>27/36</td><td>75.0%</td><td>95.8%</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Position sensitivity</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH03_URL}}" alt="Grouped chart comparing strict exact-match rate at beginning, middle, and end target positions."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; 48 primary cases per model at each position.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Model</th><th>Position</th><th>Exact</th><th>Rate</th></tr></thead><tbody><tr><td>deepseek-v4-flash</td><td>beginning</td><td>28/48</td><td>58.3%</td></tr><tr><td>deepseek-v4-flash</td><td>end</td><td>23/48</td><td>47.9%</td></tr><tr><td>deepseek-v4-flash</td><td>middle</td><td>20/48</td><td>41.7%</td></tr><tr><td>deepseek-v4-pro</td><td>beginning</td><td>31/48</td><td>64.6%</td></tr><tr><td>deepseek-v4-pro</td><td>end</td><td>27/48</td><td>56.3%</td></tr><tr><td>deepseek-v4-pro</td><td>middle</td><td>23/48</td><td>47.9%</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Paired Flash-versus-Pro outcomes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH04_URL}}" alt="Bar chart of both-pass, Flash-only, Pro-only, and both-fail outcomes across matched fixtures."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; 144 complete matched fixture pairs.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Across 144 matched fixtures, both models passed 62, Flash alone passed 9, Pro alone passed 19, and both failed 54. The paired exact-pass delta, Flash minus Pro, was -6.9%. This is a task-specific paired comparison, not a general-purpose model ranking.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">JSON and field diagnostics</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH05_URL}}" alt="Grouped diagnostic chart for valid JSON, exact key sets, and field accuracy by model."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; all diagnostic denominators are shown in the accompanying tables and source CSV.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Primary outputs produced 288/288 parseable JSON objects and 288/288 exact key sets. At field level, 1194/1656 fields matched exactly (72.1%). These diagnostics never override strict exact match.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Latency, tokens, cache accounting, and dated cost</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH06_URL}}" alt="Grouped latency chart showing first-answer and end-to-end p50 and p95 stream time by model and prompt tier."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; timings are from the disclosed us-east-1 client network vantage and show n for every group.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH07_URL}}" alt="Bar chart of dated provider cost upper bounds by analysis role."/><figcaption class="wp-element-caption">Release 1.0.0; prices frozen 2026-08-06; all 344 terminal rows included.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>The U.S. primary end-to-end latency was 12.75 s at p50 and 162.29 s at p95 across n=288 transport-complete streams. The all-role known-usage cost estimate was a cache-miss upper bound of USD 39.913229 with complete coverage (344/344 rows). These figures use the dated 2026-08-06 price snapshot and are not a current price quote.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For current implementation guidance, see the <a href="https://chat-deep.ai/docs/api/">DeepSeek API guide</a>, <a href="https://chat-deep.ai/docs/deepseek-context-caching/">context-caching guide</a>, and <a href="https://chat-deep.ai/pricing/">current pricing page</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Failure and exclusion accounting</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH08_URL}}" alt="Funnel chart reconciling 344 planned calls and the separate 288-case primary grading stages."/><figcaption class="wp-element-caption">Release 1.0.0; 20 pilot rows and 36 India rows are excluded from the primary accuracy denominator.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>All terminal states stay visible. The public failure file distinguishes transport, prompt-tier calibration, JSON parsing, exact-key, and strict-value stages. There was no automatic retry and no failed row was silently removed from its assigned denominator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Provider-counted prompt lengths</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH09_URL}}" alt="Chart comparing returned prompt-token distributions with the four frozen accepted tiers."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; primary cases only; target and accepted intervals come from protocol v1.1.0.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Matched India network-vantage validation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none","style":{"dimensions":{"width":"75%"}}} -->
+<figure class="wp-block-image aligncenter size-full" style="width:75%"><img src="{{CH10_URL}}" alt="Bar chart of paired India-minus-US end-to-end latency deltas by model and edge prompt tier."/><figcaption class="wp-element-caption">Release 1.0.0; 2026-08-06; 36 matched single-record pairs; network-vantage interpretation only.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>The India slice contains 36 matched single-record pairs at 32K and approximately 950K. Across available paired end-to-end timings, the India-minus-U.S. delta had p50 -490 ms and p95 133.93 s with n=36. This labels AWS client network vantages, not Indian users, model-hosting location, or recurring reliability. Ongoing availability belongs in the <a href="https://chat-deep.ai/research/deepseek-reliability-report/">regional DeepSeek reliability report</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Reproducibility and downloads</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><li><a href="{{PRIMARY_CASES_URL}}">Primary 288-case CSV</a></li><li><a href="{{INDIA_CASES_URL}}">India 36-pair validation CSV</a></li><li><a href="{{ALL_ATTEMPTS_URL}}">All 344 sanitized terminal rows</a></li><li><a href="{{SUMMARY_URL}}">Canonical JSON summary</a></li><li><a href="{{RELEASE_URL}}">Versioned release, protocol, calibration, charts, QA, and checksums</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The public rows are reconstructed through an explicit allowlist. They exclude credentials, authorization headers, raw prompts, raw response bodies, private S3 object keys, local paths, and account data. The validator export contains aggregate field counts rather than per-field expected and observed values, so the release does not fabricate a field-level dataset.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Limitations</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><li>Primary accuracy uses exactly 288 us-east-1 primary_accuracy rows.</li><li>The 20 pilot_excluded rows are preserved but excluded from every primary accuracy denominator.</li><li>The 36 ap-south-1 rows are a matched client network-vantage check, not a sample of Indian users or provider hosting.</li><li>Synthetic English records and strict JSON grading do not measure general model quality.</li><li>Latency belongs to this workload and narrow run window; it is not recurring reliability evidence.</li><li>Prices are dated and can change.</li><li>Cost totals with incomplete usage coverage are labeled known-usage partial sums and are never presented as full-run upper bounds.</li><li>Token and cache totals are reported as complete only when every row contains the full usage tuple; otherwise the release exposes known-usage totals with observed and missing row counts.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>This work belongs to the <a href="https://chat-deep.ai/research/">DeepSeek research hub</a> and supports the site's <a href="https://chat-deep.ai/">independent DeepSeek AI guide</a>. For model internals rather than measurements, use the <a href="https://chat-deep.ai/docs/deepseek-v4-architecture/">DeepSeek V4 architecture explainer</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Sources and related research</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><li><a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek Models &amp; Pricing</a> — current model specifications and the dated price source.</li><li><a href="https://api-docs.deepseek.com/api/create-chat-completion">Create Chat Completion</a> — streaming, model, finish-reason, fingerprint, and usage fields.</li><li><a href="https://api-docs.deepseek.com/guides/kv_cache">DeepSeek Context Caching</a> — cache behavior and returned hit/miss accounting.</li><li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro">Official DeepSeek V4 Pro model card</a> and <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf">technical report</a> — vendor architecture and vendor-reported benchmarks.</li><li><a href="https://arxiv.org/abs/2605.02173">Retrieval and Multi-Hop Reasoning in 1M-Token Context Windows</a> — separate independent research with a different protocol and corpus.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Frequently asked questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Does DeepSeek support a one-million-token context window?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DeepSeek documented a one-million-token context capacity for the tested V4 model IDs on the protocol freeze date. This study tested provider-counted prompt tiers from 32K to approximately 950K; it did not call 950K input tokens one million input tokens.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">What does the DeepSeek 1M context benchmark test?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>It tests exact single-record retrieval, a two-record join, latest-version conflict resolution, and scattered event ordering across four provider-counted prompt tiers and three target positions. It does not test general knowledge, writing quality, agents, or web search.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">How many prompts were tested?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The execution plan produced 344 terminal rows: 288 U.S. primary cases, 20 excluded pilot calls, and 36 matched India network-vantage calls. Only the 288 primary cases enter the accuracy denominator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Why test 32K, 128K, 512K, and approximately 950K tokens?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The four tiers show behavior from a substantial prompt to near the documented capacity. The approximately 950K band stays below the documented one-million-token context capacity; separately, the study capped each generated answer at 256 tokens. That study cap is not the model's documented maximum output, and 950K is not described as one million input tokens.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Does target position affect DeepSeek retrieval accuracy?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Across both models, beginning targets returned 59/96 strict exact answers, middle targets 43/96, and end targets 50/96. Position semantics differ by family, so the detailed table is the correct interpretation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Which is better for long context, V4 Flash or V4 Pro?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pro recorded the higher task-specific strict exact rate: 81/144 versus 71/144 for Flash. This narrow synthetic strict-JSON benchmark cannot establish a universal winner; paired outcomes, latency, cost, and the task family still matter.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">How much does a near-1M-token DeepSeek API request cost?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For the approximately 950K primary tier, Flash had cost coverage for 36/36 rows and Pro for 36/36. The observed-row means were USD 0.133020 for Flash and USD 0.413326 for Pro. A full-tier cache-miss upper bound exists only where coverage is complete. These estimates use the 2026-08-06 official-price snapshot and are not current quotes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Does the India subset measure DeepSeek's server location or regional reliability?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>No. It is a bounded 36-pair comparison from the AWS ap-south-1 client network vantage. It does not identify model-hosting location, represent Indian users, or establish recurring regional reliability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://chat-deep.ai/research/deepseek-1m-context-benchmark/#article","url":"https://chat-deep.ai/research/deepseek-1m-context-benchmark/","headline":"DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost","description":"See a reproducible DeepSeek V4 benchmark across 32K–950K prompts, testing retrieval accuracy, multi-hop joins, latency, token use, and real API cost.","datePublished":"{{DATE_PUBLISHED}}","dateModified":"{{DATE_MODIFIED}}","inLanguage":"en","mainEntityOfPage":"https://chat-deep.ai/research/deepseek-1m-context-benchmark/","isPartOf":{"@id":"https://chat-deep.ai/research/#webpage"},"author":{"@id":"{{AUTHOR_ID}}"},"publisher":{"@id":"{{PUBLISHER_ID}}"},"image":["{{FEATURED_IMAGE_URL}}","{{CH00_URL}}","{{CH01_URL}}","{{CH02_URL}}","{{CH03_URL}}","{{CH04_URL}}","{{CH05_URL}}","{{CH06_URL}}","{{CH07_URL}}","{{CH08_URL}}","{{CH09_URL}}","{{CH10_URL}}"],"about":["DeepSeek V4","long-context language models","model evaluation"],"isBasedOn":"{{RELEASE_URL}}","subjectOf":{"@id":"https://chat-deep.ai/research/deepseek-1m-context-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://chat-deep.ai/research/deepseek-1m-context-benchmark/#dataset","name":"DeepSeek 1M Context Benchmark Dataset","description":"A 344-row DeepSeek V4 long-context release with separate pilot, U.S. primary, and India network-vantage roles.","url":"{{RELEASE_URL}}","sameAs":"{{RELEASE_URL}}","creator":{"@id":"{{PUBLISHER_ID}}"},"datePublished":"{{DATE_PUBLISHED}}","dateModified":"{{DATE_MODIFIED}}","version":"1.0.0","license":"https://creativecommons.org/licenses/by/4.0/","measurementTechnique":"Deterministic synthetic long-context API benchmark with family-specific strict exact JSON grading","temporalCoverage":"2026-08-06T20:17:02.706Z/2026-08-07T00:07:44.737Z","variableMeasured":["Strict exact-match rate","Field accuracy","Valid-JSON rate","Prompt and cache tokens","Time to first answer token","End-to-end stream time","Estimated provider cost"],"distribution":[{"@type":"DataDownload","name":"All attempts","contentUrl":"{{ALL_ATTEMPTS_URL}}","encodingFormat":"text/csv"},{"@type":"DataDownload","name":"Primary cases","contentUrl":"{{PRIMARY_CASES_URL}}","encodingFormat":"text/csv"},{"@type":"DataDownload","name":"India latency cases","contentUrl":"{{INDIA_CASES_URL}}","encodingFormat":"text/csv"},{"@type":"DataDownload","name":"Summary","contentUrl":"{{SUMMARY_URL}}","encodingFormat":"application/json"}]},{"@type":"FAQPage","@id":"https://chat-deep.ai/research/deepseek-1m-context-benchmark/#faq","mainEntity":[{"@type":"Question","name":"Does DeepSeek support a one-million-token context window?","acceptedAnswer":{"@type":"Answer","text":"DeepSeek documented a one-million-token context capacity for the tested V4 model IDs on the protocol freeze date. This study tested provider-counted prompt tiers from 32K to approximately 950K; it did not call 950K input tokens one million input tokens."}},{"@type":"Question","name":"What does the DeepSeek 1M context benchmark test?","acceptedAnswer":{"@type":"Answer","text":"It tests exact single-record retrieval, a two-record join, latest-version conflict resolution, and scattered event ordering across four provider-counted prompt tiers and three target positions. It does not test general knowledge, writing quality, agents, or web search."}},{"@type":"Question","name":"How many prompts were tested?","acceptedAnswer":{"@type":"Answer","text":"The execution plan produced 344 terminal rows: 288 U.S. primary cases, 20 excluded pilot calls, and 36 matched India network-vantage calls. Only the 288 primary cases enter the accuracy denominator."}},{"@type":"Question","name":"Why test 32K, 128K, 512K, and approximately 950K tokens?","acceptedAnswer":{"@type":"Answer","text":"The four tiers show behavior from a substantial prompt to near the documented capacity. The approximately 950K band stays below the documented one-million-token context capacity; separately, the study capped each generated answer at 256 tokens. That study cap is not the model's documented maximum output, and 950K is not described as one million input tokens."}},{"@type":"Question","name":"Does target position affect DeepSeek retrieval accuracy?","acceptedAnswer":{"@type":"Answer","text":"Across both models, beginning targets returned 59/96 strict exact answers, middle targets 43/96, and end targets 50/96. Position semantics differ by family, so the detailed table is the correct interpretation."}},{"@type":"Question","name":"Which is better for long context, V4 Flash or V4 Pro?","acceptedAnswer":{"@type":"Answer","text":"Pro recorded the higher task-specific strict exact rate: 81/144 versus 71/144 for Flash. This narrow synthetic strict-JSON benchmark cannot establish a universal winner; paired outcomes, latency, cost, and the task family still matter."}},{"@type":"Question","name":"How much does a near-1M-token DeepSeek API request cost?","acceptedAnswer":{"@type":"Answer","text":"For the approximately 950K primary tier, Flash had cost coverage for 36/36 rows and Pro for 36/36. The observed-row means were USD 0.133020 for Flash and USD 0.413326 for Pro. A full-tier cache-miss upper bound exists only where coverage is complete. These estimates use the 2026-08-06 official-price snapshot and are not current quotes."}},{"@type":"Question","name":"Does the India subset measure DeepSeek's server location or regional reliability?","acceptedAnswer":{"@type":"Answer","text":"No. It is a bounded 36-pair comparison from the AWS ap-south-1 client network vantage. It does not identify model-hosting location, represent Indian users, or establish recurring regional reliability."}}]},{"@type":"Person","@id":"{{AUTHOR_ID}}","name":"Chat Deep AI","url":"{{AUTHOR_ID}}"},{"@type":"Organization","@id":"{{PUBLISHER_ID}}","name":"Chat-Deep.ai","url":"https://chat-deep.ai/","logo":{"@type":"ImageObject","@id":"https://chat-deep.ai/#logo","url":"https://chat-deep.ai/wp-content/uploads/2026/01/deep-ai-logo.png","contentUrl":"https://chat-deep.ai/wp-content/uploads/2026/01/deep-ai-logo.png","width":765,"height":267}}]}</script>
+<!-- /wp:html -->

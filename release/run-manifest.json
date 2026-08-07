@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "release_version": "1.0.0",
+  "protocol_id": "deepseek-v4-long-context-retrieval-v1.1.0",
+  "execution_plan_ids": [
+    "ds1m-20260806-v1"
+  ],
+  "run_window_utc": {
+    "started_at": "2026-08-06T20:17:02.706Z",
+    "finished_at": "2026-08-07T00:07:44.737Z"
+  },
+  "requested_models": [
+    "deepseek-v4-flash",
+    "deepseek-v4-pro"
+  ],
+  "returned_models": [
+    "deepseek-v4-flash",
+    "deepseek-v4-pro"
+  ],
+  "role_counts": {
+    "planned_calls": 344,
+    "terminal_rows": 344,
+    "pilot_excluded": 20,
+    "primary_accuracy": 288,
+    "india_latency_validation": 36
+  },
+  "region_counts": {
+    "ap-south-1": 46,
+    "us-east-1": 298
+  },
+  "request_contract": {
+    "api_format": "openai-chat-completions",
+    "stream": true,
+    "temperature": 0,
+    "max_tokens": 256,
+    "response_format": {
+      "type": "json_object"
+    },
+    "extra_body": {
+      "thinking": {
+        "type": "disabled"
+      }
+    }
+  },
+  "attempts_per_case": 1,
+  "automatic_retries": false,
+  "model_fingerprint_table": "model-fingerprints.csv"
+}

@@ -1,0 +1,44 @@
+{
+  "status": "draft",
+  "post_type": "page",
+  "title": "DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost",
+  "slug": "deepseek-1m-context-benchmark",
+  "canonical": "https://chat-deep.ai/research/deepseek-1m-context-benchmark/",
+  "parent": "DeepSeek Research Papers, Reports & Reading Guide",
+  "seo_title": "DeepSeek 1M Context Benchmark: Flash vs Pro (2026)",
+  "meta_description": "See a reproducible DeepSeek V4 benchmark across 32K–950K prompts, testing retrieval accuracy, multi-hop joins, latency, token use, and real API cost.",
+  "focus_keyword": "DeepSeek 1M context benchmark",
+  "excerpt": "A reproducible DeepSeek V4 benchmark with 288 U.S. primary cases, 36 matched India network-vantage calls, and 20 excluded pilot calls across 32K to approximately 950K prompts.",
+  "robots": [
+    "index",
+    "follow"
+  ],
+  "tags": [],
+  "ads": {
+    "instruction": "preserve_existing",
+    "change_requested": false
+  },
+  "images": {
+    "source_size": "full",
+    "alignment": "center",
+    "rendered_width_percent": 75,
+    "link_destination": "none",
+    "upload_required": [
+      "charts/png/ch00-frozen-benchmark-design.png",
+      "charts/png/ch01-strict-exact-match-by-prompt-tier.png",
+      "charts/png/ch02-strict-exact-match-by-task-family.png",
+      "charts/png/ch03-strict-exact-match-by-target-position.png",
+      "charts/png/ch04-flash-vs-pro-matched-outcomes.png",
+      "charts/png/ch05-json-and-field-diagnostics.png",
+      "charts/png/ch06-observed-us-primary-streaming-time.png",
+      "charts/png/ch07-dated-known-usage-cost-by-analysis-role.png",
+      "charts/png/ch08-execution-and-primary-grading-funnel.png",
+      "charts/png/ch09-provider-counted-primary-prompt-tokens.png",
+      "charts/png/ch10-india-minus-us-paired-end-to-end-latency.png"
+    ]
+  },
+  "generic_rank_math_article_schema": "remove_if_custom_TechArticle_is_inserted",
+  "publish_authorization": false,
+  "synthetic_test_data": false,
+  "publication_blocked": false
+}

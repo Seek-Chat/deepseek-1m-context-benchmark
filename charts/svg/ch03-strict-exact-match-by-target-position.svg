@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Strict Exact Match by Target Position</title>
+<desc id="desc">Strict exact-match rates at beginning, middle, and end positions.</desc>
+<rect width="1600" height="900" fill="#f8fafc"/>
+<rect x="40" y="40" width="1520" height="820" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+<text x="800" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Strict Exact Match by Target Position</text>
+<text x="800" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#475569">Primary accuracy; 48 cases per model and position</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#e2e8f0"/>
+<text x="130" y="757.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">0%</text>
+<line x1="150" y1="638.0" x2="1530" y2="638.0" stroke="#e2e8f0"/>
+<text x="130" y="645.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">20%</text>
+<line x1="150" y1="526.0" x2="1530" y2="526.0" stroke="#e2e8f0"/>
+<text x="130" y="533.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">40%</text>
+<line x1="150" y1="414.0" x2="1530" y2="414.0" stroke="#e2e8f0"/>
+<text x="130" y="421.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">60%</text>
+<line x1="150" y1="302.0" x2="1530" y2="302.0" stroke="#e2e8f0"/>
+<text x="130" y="309.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">80%</text>
+<line x1="150" y1="190.0" x2="1530" y2="190.0" stroke="#e2e8f0"/>
+<text x="130" y="197.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">100%</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#64748b" stroke-width="2"/>
+<text x="380.0" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">BEGIN</text>
+<rect x="288.0" y="423.3" width="87.0" height="326.7" rx="6" fill="#2563eb"/>
+<text x="331.5" y="413.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">58%</text>
+<rect x="380.0" y="388.3" width="87.0" height="361.7" rx="6" fill="#f97316"/>
+<text x="423.5" y="378.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">65%</text>
+<text x="840.0" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">MIDDLE</text>
+<rect x="748.0" y="516.7" width="87.0" height="233.3" rx="6" fill="#2563eb"/>
+<text x="791.5" y="506.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">42%</text>
+<rect x="840.0" y="481.7" width="87.0" height="268.3" rx="6" fill="#f97316"/>
+<text x="883.5" y="471.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">48%</text>
+<text x="1300.0" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">END</text>
+<rect x="1208.0" y="481.7" width="87.0" height="268.3" rx="6" fill="#2563eb"/>
+<text x="1251.5" y="471.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">48%</text>
+<rect x="1300.0" y="435.0" width="87.0" height="315.0" rx="6" fill="#f97316"/>
+<text x="1343.5" y="425.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">56%</text>
+<rect x="90" y="815" width="22" height="22" rx="4" fill="#2563eb"/>
+<text x="122" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">V4 FLASH</text>
+<rect x="290" y="815" width="22" height="22" rx="4" fill="#f97316"/>
+<text x="322" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">V4 PRO</text>
+<text x="1510" y="833" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#64748b">PRIMARY N=288</text>
+</svg>

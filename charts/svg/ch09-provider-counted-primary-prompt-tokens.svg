@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Provider-Counted Primary Prompt Tokens</title>
+<desc id="desc">Median provider-returned prompt tokens by frozen tier.</desc>
+<rect width="1600" height="900" fill="#f8fafc"/>
+<rect x="40" y="40" width="1520" height="820" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+<text x="800" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Provider-Counted Primary Prompt Tokens</text>
+<text x="800" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#475569">Median returned prompt tokens; min and max retained in source CSV</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#e2e8f0"/>
+<text x="130" y="757.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">0K</text>
+<line x1="150" y1="638.0" x2="1530" y2="638.0" stroke="#e2e8f0"/>
+<text x="130" y="645.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">213K</text>
+<line x1="150" y1="526.0" x2="1530" y2="526.0" stroke="#e2e8f0"/>
+<text x="130" y="533.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">426K</text>
+<line x1="150" y1="414.0" x2="1530" y2="414.0" stroke="#e2e8f0"/>
+<text x="130" y="421.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">638K</text>
+<line x1="150" y1="302.0" x2="1530" y2="302.0" stroke="#e2e8f0"/>
+<text x="130" y="309.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">851K</text>
+<line x1="150" y1="190.0" x2="1530" y2="190.0" stroke="#e2e8f0"/>
+<text x="130" y="197.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">1064K</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#64748b" stroke-width="2"/>
+<text x="322.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">32K</text>
+<rect x="230.5" y="733.1" width="87.0" height="16.9" rx="6" fill="#14b8a6"/>
+<text x="274.0" y="723.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">32K</text>
+<rect x="322.5" y="733.2" width="87.0" height="16.8" rx="6" fill="#64748b"/>
+<text x="366.0" y="723.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">32K</text>
+<text x="667.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">128K</text>
+<rect x="575.5" y="682.6" width="87.0" height="67.4" rx="6" fill="#14b8a6"/>
+<text x="619.0" y="672.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">128K</text>
+<rect x="667.5" y="682.6" width="87.0" height="67.4" rx="6" fill="#64748b"/>
+<text x="711.0" y="672.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">128K</text>
+<text x="1012.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">512K</text>
+<rect x="920.5" y="480.5" width="87.0" height="269.5" rx="6" fill="#14b8a6"/>
+<text x="964.0" y="470.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">512K</text>
+<rect x="1012.5" y="480.5" width="87.0" height="269.5" rx="6" fill="#64748b"/>
+<text x="1056.0" y="470.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">512K</text>
+<text x="1357.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">~950K</text>
+<rect x="1265.5" y="250.0" width="87.0" height="500.0" rx="6" fill="#14b8a6"/>
+<text x="1309.0" y="240.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">950K</text>
+<rect x="1357.5" y="250.0" width="87.0" height="500.0" rx="6" fill="#64748b"/>
+<text x="1401.0" y="240.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">950K</text>
+<rect x="90" y="815" width="22" height="22" rx="4" fill="#14b8a6"/>
+<text x="122" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">RETURNED MEDIAN</text>
+<rect x="355" y="815" width="22" height="22" rx="4" fill="#64748b"/>
+<text x="387" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">FROZEN TARGET</text>
+<text x="1510" y="833" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#64748b">PRIMARY N=288</text>
+</svg>

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "placeholders": [
+    "ALL_ATTEMPTS_URL",
+    "AUTHOR_ID",
+    "CH00_URL",
+    "CH01_URL",
+    "CH02_URL",
+    "CH03_URL",
+    "CH04_URL",
+    "CH05_URL",
+    "CH06_URL",
+    "CH07_URL",
+    "CH08_URL",
+    "CH09_URL",
+    "CH10_URL",
+    "DATE_MODIFIED",
+    "DATE_PUBLISHED",
+    "FEATURED_IMAGE_URL",
+    "INDIA_CASES_URL",
+    "PRIMARY_CASES_URL",
+    "PUBLISHER_ID",
+    "RELEASE_URL",
+    "REPOSITORY_URL",
+    "SUMMARY_URL"
+  ],
+  "rules": {
+    "all_must_be_https_urls_except_dates": true,
+    "images_unlinked": true,
+    "image_width_percent": 75,
+    "full_size_source": true
+  }
+}

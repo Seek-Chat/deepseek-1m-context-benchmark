@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">India Minus US Paired End-to-End Latency</title>
+<desc id="desc">Paired end-to-end latency deltas between ap-south-1 and us-east-1 client vantages.</desc>
+<rect width="1600" height="900" fill="#f8fafc"/>
+<rect x="40" y="40" width="1520" height="820" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+<text x="800" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">India Minus US Paired End-to-End Latency</text>
+<text x="800" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#475569">Median paired delta by model and edge prompt tier</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#e2e8f0"/>
+<text x="130" y="757.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">-6205MS</text>
+<line x1="150" y1="638.0" x2="1530" y2="638.0" stroke="#e2e8f0"/>
+<text x="130" y="645.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">-2409MS</text>
+<line x1="150" y1="526.0" x2="1530" y2="526.0" stroke="#e2e8f0"/>
+<text x="130" y="533.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">1386MS</text>
+<line x1="150" y1="414.0" x2="1530" y2="414.0" stroke="#e2e8f0"/>
+<text x="130" y="421.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">5182MS</text>
+<line x1="150" y1="302.0" x2="1530" y2="302.0" stroke="#e2e8f0"/>
+<text x="130" y="309.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">8978MS</text>
+<line x1="150" y1="190.0" x2="1530" y2="190.0" stroke="#e2e8f0"/>
+<text x="130" y="197.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">12774MS</text>
+<line x1="150" y1="566.9" x2="1530" y2="566.9" stroke="#64748b" stroke-width="2"/>
+<text x="322.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">F32 N9</text>
+<rect x="276.5" y="559.3" width="87.0" height="7.6" rx="6" fill="#7c3aed"/>
+<text x="320.0" y="549.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">258MS</text>
+<text x="667.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">F950 N9</text>
+<rect x="621.5" y="566.9" width="87.0" height="145.8" rx="6" fill="#7c3aed"/>
+<text x="665.0" y="737.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">-4940MS</text>
+<text x="1012.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">P32 N9</text>
+<rect x="966.5" y="566.9" width="87.0" height="17.8" rx="6" fill="#7c3aed"/>
+<text x="1010.0" y="609.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">-602MS</text>
+<text x="1357.5" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">P950 N9</text>
+<rect x="1311.5" y="246.0" width="87.0" height="320.9" rx="6" fill="#7c3aed"/>
+<text x="1355.0" y="236.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">10876MS</text>
+<rect x="90" y="815" width="22" height="22" rx="4" fill="#7c3aed"/>
+<text x="122" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">MEDIAN DELTA MS</text>
+<text x="1510" y="833" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#64748b">COORDINATE PAIRS N=36 - COMPLETE TIMING N=36</text>
+</svg>

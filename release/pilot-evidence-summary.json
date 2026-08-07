@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_role": "pilot_excluded",
+  "terminal_rows": 20,
+  "regions": {
+    "ap-south-1": 10,
+    "us-east-1": 10
+  },
+  "transport_complete": 20,
+  "valid_json": 20,
+  "tier_calibration_passed": 20,
+  "thinking_disabled_violations": 0,
+  "exact_matches_reported_as_outcomes": 12,
+  "accuracy_is_not_an_acceptance_criterion": true,
+  "included_in_primary_accuracy": false,
+  "interpretation": "The pilot checks evidence and execution-contract integrity. Retrieval mistakes remain benchmark outcomes and do not by themselves invalidate the evidence gate."
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "deepseek-v4-long-context-retrieval-v1.1.0",
+  "protocol_sha256": "39c68bfc607157011012dc47d59524dcf3d5d7155071e6862c5038410d642c16",
+  "frozen_on": "2026-08-06",
+  "language": "en",
+  "scope": "Four objectively graded long-context retrieval and synthesis families over deterministic synthetic record corpora.",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "label": "DeepSeek V4 Pro"
+    }
+  ],
+  "task_families": [
+    {
+      "id": "single_record",
+      "label": "Exact single-record retrieval",
+      "required_keys": [
+        "lookup_key",
+        "alpha",
+        "beta",
+        "gamma",
+        "quantity",
+        "checksum"
+      ]
+    },
+    {
+      "id": "multi_hop_join",
+      "label": "Two-record multi-hop join",
+      "required_keys": [
+        "source_key",
+        "linked_key",
+        "alpha",
+        "beta",
+        "gamma",
+        "quantity",
+        "checksum"
+      ]
+    },
+    {
+      "id": "latest_version",
+      "label": "Latest-version conflict resolution",
+      "required_keys": [
+        "entity_key",
+        "version",
+        "alpha",
+        "beta",
+        "gamma",
+        "quantity",
+        "checksum"
+      ]
+    },
+    {
+      "id": "event_ordering",
+      "label": "Scattered event ordering",
+      "required_keys": [
+        "group_key",
+        "ordered_event_codes",
+        "ordered_checksums"
+      ]
+    }
+  ],
+  "context_tiers": [
+    {
+      "id": "32k",
+      "label": "32K",
+      "target_prompt_tokens": 32000,
+      "record_counts": {
+        "single_record": 1277,
+        "multi_hop_join": 1029,
+        "latest_version": 1139,
+        "event_ordering": 1181
+      },
+      "accepted_prompt_tokens_min": 24000,
+      "accepted_prompt_tokens_max": 36000,
+      "max_billable_prompt_tokens": 36000
+    },
+    {
+      "id": "128k",
+      "label": "128K",
+      "target_prompt_tokens": 128000,
+      "record_counts": {
+        "single_record": 5117,
+        "multi_hop_join": 4126,
+        "latest_version": 4568,
+        "event_ordering": 4737
+      },
+      "accepted_prompt_tokens_min": 110000,
+      "accepted_prompt_tokens_max": 140000,
+      "max_billable_prompt_tokens": 140000
+    },
+    {
+      "id": "512k",
+      "label": "512K",
+      "target_prompt_tokens": 512000,
+      "record_counts": {
+        "single_record": 20477,
+        "multi_hop_join": 16513,
+        "latest_version": 18282,
+        "event_ordering": 18959
+      },
+      "accepted_prompt_tokens_min": 450000,
+      "accepted_prompt_tokens_max": 550000,
+      "max_billable_prompt_tokens": 550000
+    },
+    {
+      "id": "950k",
+      "label": "Approximately 950K",
+      "target_prompt_tokens": 950000,
+      "record_counts": {
+        "single_record": 37997,
+        "multi_hop_join": 30642,
+        "latest_version": 33925,
+        "event_ordering": 35181
+      },
+      "accepted_prompt_tokens_min": 850000,
+      "accepted_prompt_tokens_max": 980000,
+      "max_billable_prompt_tokens": 980000
+    }
+  ],
+  "positions": [
+    {
+      "id": "beginning",
+      "fraction": 0.1
+    },
+    {
+      "id": "middle",
+      "fraction": 0.5
+    },
+    {
+      "id": "end",
+      "fraction": 0.9
+    }
+  ],
+  "repeats": 3,
+  "request": {
+    "api_format": "openai-chat-completions",
+    "stream": true,
+    "temperature": 0,
+    "max_tokens": 256,
+    "response_format": {
+      "type": "json_object"
+    },
+    "extra_body": {
+      "thinking": {
+        "type": "disabled"
+      }
+    }
+  },
+  "documented_model_limits_at_protocol_freeze": {
+    "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "context_capacity": "1M",
+    "maximum_output": "384K"
+  },
+  "study_generation_cap": {
+    "max_tokens_per_request": 256,
+    "interpretation": "A study-chosen answer cap for short objective JSON responses; not the model's documented maximum output."
+  },
+  "grading": {
+    "method": "family_specific_strict_exact_json",
+    "primary_metric": "exact_match_rate",
+    "secondary_metrics": [
+      "field_accuracy",
+      "valid_json_rate"
+    ]
+  },
+  "execution": {
+    "attempts_per_case": 1,
+    "automatic_retries": false,
+    "primary_accuracy": {
+      "calls": 288,
+      "region_vantage": "us-east-1"
+    },
+    "pilot_excluded": {
+      "calls": 20,
+      "region_vantages": {
+        "us-east-1": 10,
+        "ap-south-1": 10
+      },
+      "included_in_primary_accuracy": false
+    },
+    "india_latency_validation": {
+      "calls": 36,
+      "region_vantage": "ap-south-1",
+      "family": "single_record",
+      "tiers": [
+        "32k",
+        "950k"
+      ],
+      "included_in_primary_accuracy": false
+    },
+    "published_case_inventory": "release-case-inventory.csv",
+    "published_case_inventory_order": "Lexicographic presentation order only; not the AWS dispatch sequence."
+  },
+  "operational_preflight_disclosure": {
+    "stage": "S3 result-existence preflight before the paid U.S. pilot",
+    "initial_outcome": "Stopped because the execution role lacked the required bucket-list permission.",
+    "provider_posts_sent": 0,
+    "provider_cost_incurred": false,
+    "remediation": "Added the required least-privilege bucket-list permission.",
+    "retry_execution_label_published": false,
+    "retry_execution_description": "A clearly labeled infrastructure-only retry execution.",
+    "same_frozen_run_id_and_version_reused": true,
+    "paid_pilot_cases_retried": 0,
+    "included_in_model_denominators": false,
+    "public_redactions": "Account identifiers, ARNs, and private storage paths are not published."
+  },
+  "interpretation_boundaries": [
+    "Primary accuracy uses exactly 288 us-east-1 primary_accuracy rows.",
+    "The 20 pilot_excluded rows are preserved but excluded from every primary accuracy denominator.",
+    "The 36 ap-south-1 rows are a matched client network-vantage check, not a sample of Indian users or provider hosting.",
+    "Synthetic English records and strict JSON grading do not measure general model quality.",
+    "Latency belongs to this workload and narrow run window; it is not recurring reliability evidence.",
+    "Prices are dated and can change.",
+    "Cost totals with incomplete usage coverage are labeled known-usage partial sums and are never presented as full-run upper bounds.",
+    "Token and cache totals are reported as complete only when every row contains the full usage tuple; otherwise the release exposes known-usage totals with observed and missing row counts."
+  ]
+}

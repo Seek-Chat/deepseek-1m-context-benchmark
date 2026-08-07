@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "charts": [
+    {
+      "id": "CH00",
+      "title": "Frozen Benchmark Design",
+      "svg": "charts/svg/ch00-frozen-benchmark-design.svg",
+      "png": "charts/png/ch00-frozen-benchmark-design.png",
+      "data": "charts/data/ch00-frozen-benchmark-design.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "release/release-case-inventory.csv"
+      ]
+    },
+    {
+      "id": "CH01",
+      "title": "Strict Exact Match by Prompt Tier",
+      "svg": "charts/svg/ch01-strict-exact-match-by-prompt-tier.svg",
+      "png": "charts/png/ch01-strict-exact-match-by-prompt-tier.png",
+      "data": "charts/data/ch01-strict-exact-match-by-prompt-tier.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/primary-by-model-tier.csv"
+      ]
+    },
+    {
+      "id": "CH02",
+      "title": "Strict Exact Match by Task Family",
+      "svg": "charts/svg/ch02-strict-exact-match-by-task-family.svg",
+      "png": "charts/png/ch02-strict-exact-match-by-task-family.png",
+      "data": "charts/data/ch02-strict-exact-match-by-task-family.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/primary-by-model-family.csv"
+      ]
+    },
+    {
+      "id": "CH03",
+      "title": "Strict Exact Match by Target Position",
+      "svg": "charts/svg/ch03-strict-exact-match-by-target-position.svg",
+      "png": "charts/png/ch03-strict-exact-match-by-target-position.png",
+      "data": "charts/data/ch03-strict-exact-match-by-target-position.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/primary-by-model-position.csv"
+      ]
+    },
+    {
+      "id": "CH04",
+      "title": "Flash vs Pro Matched Outcomes",
+      "svg": "charts/svg/ch04-flash-vs-pro-matched-outcomes.svg",
+      "png": "charts/png/ch04-flash-vs-pro-matched-outcomes.png",
+      "data": "charts/data/ch04-flash-vs-pro-matched-outcomes.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/paired-flash-pro-outcomes.csv"
+      ]
+    },
+    {
+      "id": "CH05",
+      "title": "JSON and Field Diagnostics",
+      "svg": "charts/svg/ch05-json-and-field-diagnostics.svg",
+      "png": "charts/png/ch05-json-and-field-diagnostics.png",
+      "data": "charts/data/ch05-json-and-field-diagnostics.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/primary-by-model.csv"
+      ]
+    },
+    {
+      "id": "CH06",
+      "title": "Observed US Primary Streaming Time",
+      "svg": "charts/svg/ch06-observed-us-primary-streaming-time.svg",
+      "png": "charts/png/ch06-observed-us-primary-streaming-time.png",
+      "data": "charts/data/ch06-observed-us-primary-streaming-time.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/primary-by-model-tier.csv"
+      ]
+    },
+    {
+      "id": "CH07",
+      "title": "Dated Known-Usage Cost by Analysis Role",
+      "svg": "charts/svg/ch07-dated-known-usage-cost-by-analysis-role.svg",
+      "png": "charts/png/ch07-dated-known-usage-cost-by-analysis-role.png",
+      "data": "charts/data/ch07-dated-known-usage-cost-by-analysis-role.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/analysis-role-summary.csv"
+      ]
+    },
+    {
+      "id": "CH08",
+      "title": "Execution and Primary Grading Funnel",
+      "svg": "charts/svg/ch08-execution-and-primary-grading-funnel.svg",
+      "png": "charts/png/ch08-execution-and-primary-grading-funnel.png",
+      "data": "charts/data/ch08-execution-and-primary-grading-funnel.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/primary-funnel.csv"
+      ]
+    },
+    {
+      "id": "CH09",
+      "title": "Provider-Counted Primary Prompt Tokens",
+      "svg": "charts/svg/ch09-provider-counted-primary-prompt-tokens.svg",
+      "png": "charts/png/ch09-provider-counted-primary-prompt-tokens.png",
+      "data": "charts/data/ch09-provider-counted-primary-prompt-tokens.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "charts/data/ch09-returned-prompt-token-range.csv",
+        "release/protocol.json"
+      ]
+    },
+    {
+      "id": "CH10",
+      "title": "India Minus US Paired End-to-End Latency",
+      "svg": "charts/svg/ch10-india-minus-us-paired-end-to-end-latency.svg",
+      "png": "charts/png/ch10-india-minus-us-paired-end-to-end-latency.png",
+      "data": "charts/data/ch10-india-minus-us-paired-end-to-end-latency.csv",
+      "width_px": 1600,
+      "height_px": 900,
+      "source_files": [
+        "tables/india-paired-latency-summary.csv",
+        "release/india-matched-pairs.csv"
+      ]
+    }
+  ]
+}

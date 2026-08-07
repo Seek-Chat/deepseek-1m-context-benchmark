@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Observed US Primary Streaming Time</title>
+<desc id="desc">Streaming latency from the us-east-1 client network vantage.</desc>
+<rect width="1600" height="900" fill="#f8fafc"/>
+<rect x="40" y="40" width="1520" height="820" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+<text x="800" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Observed US Primary Streaming Time</text>
+<text x="800" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#475569">first-answer and end-to-end p50/p95 by model and prompt tier</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#e2e8f0"/>
+<text x="130" y="757.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">0MS</text>
+<line x1="150" y1="638.0" x2="1530" y2="638.0" stroke="#e2e8f0"/>
+<text x="130" y="645.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">41708MS</text>
+<line x1="150" y1="526.0" x2="1530" y2="526.0" stroke="#e2e8f0"/>
+<text x="130" y="533.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">83415MS</text>
+<line x1="150" y1="414.0" x2="1530" y2="414.0" stroke="#e2e8f0"/>
+<text x="130" y="421.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">125123MS</text>
+<line x1="150" y1="302.0" x2="1530" y2="302.0" stroke="#e2e8f0"/>
+<text x="130" y="309.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">166831MS</text>
+<line x1="150" y1="190.0" x2="1530" y2="190.0" stroke="#e2e8f0"/>
+<text x="130" y="197.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#64748b">208538MS</text>
+<line x1="150" y1="750.0" x2="1530" y2="750.0" stroke="#64748b" stroke-width="2"/>
+<text x="236.3" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">F32 N36</text>
+<rect x="174.2" y="745.7" width="26.0" height="4.3" rx="6" fill="#14b8a6"/>
+<rect x="205.2" y="744.4" width="26.0" height="5.6" rx="6" fill="#2563eb"/>
+<rect x="236.3" y="744.8" width="26.0" height="5.2" rx="6" fill="#f97316"/>
+<rect x="267.3" y="743.0" width="26.0" height="7.0" rx="6" fill="#dc2626"/>
+<text x="408.8" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">F128 N36</text>
+<rect x="346.6" y="735.1" width="26.0" height="14.9" rx="6" fill="#14b8a6"/>
+<rect x="377.7" y="730.9" width="26.0" height="19.1" rx="6" fill="#2563eb"/>
+<rect x="408.8" y="733.9" width="26.0" height="16.1" rx="6" fill="#f97316"/>
+<rect x="439.8" y="729.8" width="26.0" height="20.2" rx="6" fill="#dc2626"/>
+<text x="581.3" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">F512 N36</text>
+<rect x="519.1" y="719.7" width="26.0" height="30.3" rx="6" fill="#14b8a6"/>
+<rect x="550.2" y="659.1" width="26.0" height="90.9" rx="6" fill="#2563eb"/>
+<rect x="581.3" y="716.7" width="26.0" height="33.3" rx="6" fill="#f97316"/>
+<rect x="612.3" y="657.4" width="26.0" height="92.6" rx="6" fill="#dc2626"/>
+<text x="753.8" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">F950 N36</text>
+<rect x="691.6" y="530.4" width="26.0" height="219.6" rx="6" fill="#14b8a6"/>
+<rect x="722.7" y="507.3" width="26.0" height="242.7" rx="6" fill="#2563eb"/>
+<rect x="753.8" y="528.7" width="26.0" height="221.3" rx="6" fill="#f97316"/>
+<rect x="784.8" y="505.1" width="26.0" height="244.9" rx="6" fill="#dc2626"/>
+<text x="926.3" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">P32 N36</text>
+<rect x="864.1" y="741.3" width="26.0" height="8.7" rx="6" fill="#14b8a6"/>
+<rect x="895.2" y="736.6" width="26.0" height="13.4" rx="6" fill="#2563eb"/>
+<rect x="926.3" y="739.5" width="26.0" height="10.5" rx="6" fill="#f97316"/>
+<rect x="957.3" y="735.0" width="26.0" height="15.0" rx="6" fill="#dc2626"/>
+<text x="1098.8" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">P128 N36</text>
+<rect x="1036.7" y="717.7" width="26.0" height="32.3" rx="6" fill="#14b8a6"/>
+<rect x="1067.7" y="694.1" width="26.0" height="55.9" rx="6" fill="#2563eb"/>
+<rect x="1098.8" y="715.9" width="26.0" height="34.1" rx="6" fill="#f97316"/>
+<rect x="1129.8" y="692.2" width="26.0" height="57.8" rx="6" fill="#dc2626"/>
+<text x="1271.3" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">P512 N36</text>
+<rect x="1209.2" y="570.9" width="26.0" height="179.1" rx="6" fill="#14b8a6"/>
+<rect x="1240.2" y="418.6" width="26.0" height="331.4" rx="6" fill="#2563eb"/>
+<rect x="1271.3" y="569.1" width="26.0" height="180.9" rx="6" fill="#f97316"/>
+<rect x="1302.3" y="417.0" width="26.0" height="333.0" rx="6" fill="#dc2626"/>
+<text x="1443.8" y="794" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">P950 N36</text>
+<rect x="1381.7" y="326.2" width="26.0" height="423.8" rx="6" fill="#14b8a6"/>
+<rect x="1412.7" y="251.7" width="26.0" height="498.3" rx="6" fill="#2563eb"/>
+<rect x="1443.8" y="324.4" width="26.0" height="425.6" rx="6" fill="#f97316"/>
+<rect x="1474.8" y="250.0" width="26.0" height="500.0" rx="6" fill="#dc2626"/>
+<rect x="90" y="815" width="22" height="22" rx="4" fill="#14b8a6"/>
+<text x="122" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">FIRST P50</text>
+<rect x="290" y="815" width="22" height="22" rx="4" fill="#2563eb"/>
+<text x="322" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">FIRST P95</text>
+<rect x="490" y="815" width="22" height="22" rx="4" fill="#f97316"/>
+<text x="522" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">E2E P50</text>
+<rect x="690" y="815" width="22" height="22" rx="4" fill="#dc2626"/>
+<text x="722" y="833" font-family="Arial, sans-serif" font-size="19" fill="#334155">E2E P95</text>
+<text x="1510" y="833" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#64748b">US-EAST-1 CLIENT VANTAGE - EXACT N IN EACH CATEGORY</text>
+</svg>

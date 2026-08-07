@@ -1,0 +1,31 @@
+{
+  "qa_schema_version": "1.0.0",
+  "release_version": "1.0.0",
+  "synthetic_test_data": false,
+  "all_passed": true,
+  "wordpress_ready": false,
+  "wordpress_blocker": "Upload full-size chart images and bind every required public URL/date/entity placeholder before saving the WordPress draft.",
+  "trusted_source_archive_sha256": "38337e1213e2cf7ba7de8f21703e11772eddb71326361a66f27f7a8d0c114dcb",
+  "checks": {
+    "production_source_archive_gate_passed": true,
+    "validator_export_hashes_and_sizes_verified": true,
+    "validator_csv_jsonl_field_parity": true,
+    "validator_full_run_complete": true,
+    "terminal_rows_344": true,
+    "role_counts_20_288_36": true,
+    "primary_model_counts_144_each": true,
+    "matched_flash_pro_pairs_144": true,
+    "matched_india_pairs_36": true,
+    "no_public_privacy_findings": true,
+    "charts_11_svg_and_png": true,
+    "publication_tables_present": true,
+    "article_has_no_body_h1": true,
+    "article_images_unlinked": true,
+    "article_images_centered_75_percent": true,
+    "wordpress_tags_empty": true,
+    "ad_instruction_preserves_existing": true,
+    "article_and_charts_read_back_only_from_allowlisted_release_files": true
+  },
+  "privacy_findings": [],
+  "pre_qa_file_count": 67
+}

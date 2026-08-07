@@ -1,0 +1,63 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.aws/
+*.pem
+*.key
+*credentials*
+*secrets*
+
+# Dependencies and caches
+node_modules/
+.pnpm-store/
+.deps/
+.aws-sam/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+.coverage
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Internal execution and evidence
+artifacts/
+evidence/
+raw/
+runs/
+logs/
+*.log
+*.response.bin
+*.request.json
+*.sse
+full-run-index.actual.tsv
+
+# Deployment and WordPress-only outputs
+wordpress-ready/
+media-map.json
+wordpress-ready-qa.json
+*.preview.html
+*.admin.html
+
+# Third-party files not cleared for redistribution
+benchmark/tokenizer/tokenizer.json
+benchmark/tokenizer/tokenizer_config.json
+benchmark/sources/
+
+# Internal archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Assembly staging
+.staging-*/
+repo-ready-*/

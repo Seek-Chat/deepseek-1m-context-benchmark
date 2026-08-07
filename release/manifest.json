@@ -1,0 +1,368 @@
+{
+  "manifest_schema_version": "1.0.0",
+  "release_version": "1.0.0",
+  "protocol_id": "deepseek-v4-long-context-retrieval-v1.1.0",
+  "canonical_article_url": "https://chat-deep.ai/research/deepseek-1m-context-benchmark/",
+  "status": "dataset_release_passed_article_requires_media_binding",
+  "generated_at_utc": "2026-08-07T01:44:08.222Z",
+  "source_hashes": {
+    "results_csv": "c788a45e7293d9c7bdf989ae70e22ea7af2d6c9d5d459b4316c318230177d688",
+    "results_jsonl": "7a63eecadb63229db64361432344c7775134c64de3147f68fd2168569079461d",
+    "validator_summary_json": "0ffd9b6f6493675cb2384997924507e920da6d3cc5a07591dff2363cad983a68",
+    "validation_report_json": "52e8bd9a4b19c7ed4ab061778ea4e79a43c1b926a3eceb9c01822294e34a4e07",
+    "validation_export_manifest_json": "adc2f364e269ce63785cbca399a2329a25bba9c938e2b38f476b5ccaa3cb55f7",
+    "protocol_json": "39c68bfc607157011012dc47d59524dcf3d5d7155071e6862c5038410d642c16",
+    "calibration_json": "0d8265a9f74bb39d9b1947e90e041dc330dcdb9b445d2d82a27da378f3bd88b2",
+    "publication_safe_archive_sha256": "38337e1213e2cf7ba7de8f21703e11772eddb71326361a66f27f7a8d0c114dcb"
+  },
+  "trusted_source_archive_sha256": "38337e1213e2cf7ba7de8f21703e11772eddb71326361a66f27f7a8d0c114dcb",
+  "counts": {
+    "planned_calls": 344,
+    "terminal_rows": 344,
+    "pilot_excluded": 20,
+    "primary_accuracy": 288,
+    "india_latency_validation": 36
+  },
+  "files": [
+    {
+      "path": "charts/chart-inventory.json",
+      "bytes": 4789,
+      "sha256": "685ec75ebdd6a276162cfa728ea49892df9e8d98c69feab03ba05423533452d4"
+    },
+    {
+      "path": "charts/data/ch00-frozen-benchmark-design.csv",
+      "bytes": 141,
+      "sha256": "39296fe2449e1075e9fd7235fad9da62a3adb2fb13323889728c62332de11312"
+    },
+    {
+      "path": "charts/data/ch01-strict-exact-match-by-prompt-tier.csv",
+      "bytes": 372,
+      "sha256": "423f0f168f1b106fac81ee818d88f03602ea6dbfd414a1706efb95e91cce6cc8"
+    },
+    {
+      "path": "charts/data/ch02-strict-exact-match-by-task-family.csv",
+      "bytes": 334,
+      "sha256": "bc4a35befed33858007078034474be7313641eb4f619b8117ecd9c9c49469def"
+    },
+    {
+      "path": "charts/data/ch03-strict-exact-match-by-target-position.csv",
+      "bytes": 280,
+      "sha256": "485f93bfe9bbaee415baf8f72df9399e5dc193d9fd3352d8c928294bcde7ea76"
+    },
+    {
+      "path": "charts/data/ch04-flash-vs-pro-matched-outcomes.csv",
+      "bytes": 187,
+      "sha256": "688bdfadcd1ba4ce514c60c2b57cbb346b38dfc98693bdfb99162d46e4176697"
+    },
+    {
+      "path": "charts/data/ch05-json-and-field-diagnostics.csv",
+      "bytes": 254,
+      "sha256": "0a0370ddcb14d8031a0dd4be89086eb504e946a7d1dbd566ff98cc1ed74061ab"
+    },
+    {
+      "path": "charts/data/ch06-observed-us-primary-streaming-time.csv",
+      "bytes": 1046,
+      "sha256": "fe5afbbba2c9268b9125f8f5e73de33c8bcf98d72ad5294a39e448cc65568d73"
+    },
+    {
+      "path": "charts/data/ch07-dated-known-usage-cost-by-analysis-role.csv",
+      "bytes": 181,
+      "sha256": "335357a19f7bc9ee96445fa1e39605016f8d4a725ea4e579896a5c1be55174db"
+    },
+    {
+      "path": "charts/data/ch08-execution-and-primary-grading-funnel.csv",
+      "bytes": 321,
+      "sha256": "ea59c629a6549963884e7ff384420c017cfc4b57ee803e19563cb291534663a9"
+    },
+    {
+      "path": "charts/data/ch09-provider-counted-primary-prompt-tokens.csv",
+      "bytes": 346,
+      "sha256": "8ca7972fb20eeac206679cc6a3b833b2ac3a36d86f216aaa69413d30ac581b0a"
+    },
+    {
+      "path": "charts/data/ch09-returned-prompt-token-range.csv",
+      "bytes": 150,
+      "sha256": "1550a854212487cd4372cb5c6b2703f2ac9bd40225dee71ad18e629045165c76"
+    },
+    {
+      "path": "charts/data/ch10-india-minus-us-paired-end-to-end-latency.csv",
+      "bytes": 183,
+      "sha256": "6f29b25e56be837641231b5956eec39fefc7320bcff185f9036dfd17211dd352"
+    },
+    {
+      "path": "charts/png/ch00-frozen-benchmark-design.png",
+      "bytes": 16042,
+      "sha256": "7486a644448e7fc73c3449d4cde42936db6ec64f4651187e1d56004f12cb121e"
+    },
+    {
+      "path": "charts/png/ch01-strict-exact-match-by-prompt-tier.png",
+      "bytes": 20551,
+      "sha256": "d817cea94ec1c8481f2c7976082924c9ef9d49d861da9ed259e10a8523c8bbe4"
+    },
+    {
+      "path": "charts/png/ch02-strict-exact-match-by-task-family.png",
+      "bytes": 20765,
+      "sha256": "349ffee3caa00495f6ba8905fe7841a58e8c4099c99c12dc3da43df793a78e72"
+    },
+    {
+      "path": "charts/png/ch03-strict-exact-match-by-target-position.png",
+      "bytes": 19015,
+      "sha256": "3e0fe30f9663b72cb99f56236bd72259e9c65a3fd4213d8dab83765e94d9208f"
+    },
+    {
+      "path": "charts/png/ch04-flash-vs-pro-matched-outcomes.png",
+      "bytes": 18246,
+      "sha256": "aef84945a583dff0b6d16f5103951c9a7b755c427b74f4cd8653f55376bc9bc6"
+    },
+    {
+      "path": "charts/png/ch05-json-and-field-diagnostics.png",
+      "bytes": 21234,
+      "sha256": "37c9c288e174108c88b05b5d814110a7b7b87b504bf0806c9d4db2c26d3b5b87"
+    },
+    {
+      "path": "charts/png/ch06-observed-us-primary-streaming-time.png",
+      "bytes": 20663,
+      "sha256": "a53ca2a0ae1a52a2a531569d9c09dafbd6a5d69e495a4babc24711133eb444f8"
+    },
+    {
+      "path": "charts/png/ch07-dated-known-usage-cost-by-analysis-role.png",
+      "bytes": 16918,
+      "sha256": "9377c1d490ea280ffcf652ec51e2c4e2e147704e2e9cd6e3c85bb6c3ba4db475"
+    },
+    {
+      "path": "charts/png/ch08-execution-and-primary-grading-funnel.png",
+      "bytes": 22357,
+      "sha256": "981591b88faf990ec9126068044af834876381be9739af8fdada7dbe1b7c1d9f"
+    },
+    {
+      "path": "charts/png/ch09-provider-counted-primary-prompt-tokens.png",
+      "bytes": 19759,
+      "sha256": "951c7ee44316ea96500a0056de52c2fa835b180acc34fabb661425d1595029bc"
+    },
+    {
+      "path": "charts/png/ch10-india-minus-us-paired-end-to-end-latency.png",
+      "bytes": 17143,
+      "sha256": "db5683f031b43c194cc48ef7be4bfdadfe7b0576ef2995072ab6965616627022"
+    },
+    {
+      "path": "charts/svg/ch00-frozen-benchmark-design.svg",
+      "bytes": 3231,
+      "sha256": "1bfcea825fe8fb36d01593ad5b4c16c5a1c95b9647f2a071d2135ddcad84065c"
+    },
+    {
+      "path": "charts/svg/ch01-strict-exact-match-by-prompt-tier.svg",
+      "bytes": 4619,
+      "sha256": "4f7e738ee1a0ca0260649bc671e10cad94fc05386d6d80871a38d308b8ff8399"
+    },
+    {
+      "path": "charts/svg/ch02-strict-exact-match-by-task-family.svg",
+      "bytes": 4578,
+      "sha256": "c7d0930c025a1021fe4d90efbed25d805b0a0592196f21132ab3302d5fe72eb3"
+    },
+    {
+      "path": "charts/svg/ch03-strict-exact-match-by-target-position.svg",
+      "bytes": 4062,
+      "sha256": "8f4d1a45c34ee6f0f9a12dac9fb31971741a21ac4cddcfde5167c6996fc71cf8"
+    },
+    {
+      "path": "charts/svg/ch04-flash-vs-pro-matched-outcomes.svg",
+      "bytes": 3564,
+      "sha256": "c94cb14e45fc15aab3f5059cafa6ea624a3508a7621e17be93a59e6534b76018"
+    },
+    {
+      "path": "charts/svg/ch05-json-and-field-diagnostics.svg",
+      "bytes": 4061,
+      "sha256": "76e0f4432f2f47f7a647f8369e36d9c8c0f23faebf777b9a409a63ccdd730973"
+    },
+    {
+      "path": "charts/svg/ch06-observed-us-primary-streaming-time.svg",
+      "bytes": 6271,
+      "sha256": "a60c7dc415f81dd72199b5c9cdca5e7665259e9c2f2cb4299dc538fae9be285f"
+    },
+    {
+      "path": "charts/svg/ch07-dated-known-usage-cost-by-analysis-role.svg",
+      "bytes": 3351,
+      "sha256": "14fc4220f2613c837c44324e2055acf5c682bfc8ba5594d925147b57bf554445"
+    },
+    {
+      "path": "charts/svg/ch08-execution-and-primary-grading-funnel.svg",
+      "bytes": 4932,
+      "sha256": "687e54bc35d75396d231ef133300e9e4d282eb3f965795ee769e2d5762081754"
+    },
+    {
+      "path": "charts/svg/ch09-provider-counted-primary-prompt-tokens.svg",
+      "bytes": 4642,
+      "sha256": "d9ed0df38f8395acf6d55f6313bfed0b3b0ad24f2650416c7e1f49d307940a12"
+    },
+    {
+      "path": "charts/svg/ch10-india-minus-us-paired-end-to-end-latency.svg",
+      "bytes": 3682,
+      "sha256": "c1bc30fca82055382350259f3651a94aed3c69775449a26fe7bc883dfd90fc6e"
+    },
+    {
+      "path": "gutenberg-draft.template.html",
+      "bytes": 32265,
+      "sha256": "263d9860c674913b29f8c196ff79774253361a5d6cfcdcec2e9386aa634ddbe5"
+    },
+    {
+      "path": "release/all-attempts.csv",
+      "bytes": 332682,
+      "sha256": "eaed4c7f3d10a1ec975cb4e0e6fb230aa78919f619e64284adceec9adb0e567f"
+    },
+    {
+      "path": "release/all-attempts.jsonl",
+      "bytes": 718077,
+      "sha256": "0da584f9e98ea8c4a3791c0d5482d5ecd65ed59917daab8ba4e701be8b838860"
+    },
+    {
+      "path": "release/calibration.json",
+      "bytes": 93886,
+      "sha256": "0d8265a9f74bb39d9b1947e90e041dc330dcdb9b445d2d82a27da378f3bd88b2"
+    },
+    {
+      "path": "release/DATA-DICTIONARY.md",
+      "bytes": 4306,
+      "sha256": "20edca9b378257ef0c15ed39d52c8b72a30f5e81a106b0607ede03ebd2b42702"
+    },
+    {
+      "path": "release/failures.csv",
+      "bytes": 50657,
+      "sha256": "d43f8d45885af48161c3c8fb4de8011c67f9ff85c5324e95e1f67942c54e8061"
+    },
+    {
+      "path": "release/india-latency-cases.csv",
+      "bytes": 35122,
+      "sha256": "0046db3c972e085075bd109921d0439a6944ca5fe9e9532abc91670d118f0891"
+    },
+    {
+      "path": "release/india-matched-pairs.csv",
+      "bytes": 3708,
+      "sha256": "51c51e3cef225fef00117519a16742dbabb296721829a2e710a1b1896dddc0a5"
+    },
+    {
+      "path": "release/LICENSE-CODE.txt",
+      "bytes": 61,
+      "sha256": "a1176131518181c216ad40ae7f334aa113052f3b54b263cc43c479b5edafb746"
+    },
+    {
+      "path": "release/LICENSE-DATA.txt",
+      "bytes": 103,
+      "sha256": "ef3418854f642053d285ea91f29121c23c95f1b672960da9ddb74f9c87a8fe28"
+    },
+    {
+      "path": "release/methodology.json",
+      "bytes": 6541,
+      "sha256": "5b9edaf7898e95ad0d48a86d539c529d6be24ac816d625915fd80a52452987b0"
+    },
+    {
+      "path": "release/model-fingerprints.csv",
+      "bytes": 1439,
+      "sha256": "5309cfd67f7d0fe930a02f57a32a4f0a5ab293fbaae1cfd0a4e4045c3618c527"
+    },
+    {
+      "path": "release/pilot-evidence-summary.json",
+      "bytes": 591,
+      "sha256": "3284bf21cba423b516522ac1aca967334bfe185b4bb101d19c615498e954093c"
+    },
+    {
+      "path": "release/pilot-excluded-cases.csv",
+      "bytes": 20851,
+      "sha256": "ba4785785b734cc3c8ba0124617e54982f36bf3a8a13a5bd8299eb820f4a9721"
+    },
+    {
+      "path": "release/prices.json",
+      "bytes": 575,
+      "sha256": "3b36528039a263989c71369984415032e50f3e3bedfdb2778cf05ce53a770289"
+    },
+    {
+      "path": "release/primary-cases.csv",
+      "bytes": 278543,
+      "sha256": "c8c252b795cacd504eb360108e0ff71038eef195b87428cc753cb5c33d9df617"
+    },
+    {
+      "path": "release/protocol.json",
+      "bytes": 5017,
+      "sha256": "39c68bfc607157011012dc47d59524dcf3d5d7155071e6862c5038410d642c16"
+    },
+    {
+      "path": "release/qa-report.json",
+      "bytes": 1246,
+      "sha256": "753f351382093bea057599866be7665fc2246d0d59dd3075e55315359e3ae9b1"
+    },
+    {
+      "path": "release/README.md",
+      "bytes": 3106,
+      "sha256": "154d77a1454d9457f9f93575c614bbacf40dd11c732068cd4ee26b7057da953b"
+    },
+    {
+      "path": "release/release-case-inventory.csv",
+      "bytes": 61514,
+      "sha256": "642fa8c113da75d652e9ef961ef991aa898d03eaf361478bb18aae7402bf985c"
+    },
+    {
+      "path": "release/run-manifest.json",
+      "bytes": 1074,
+      "sha256": "e2c9b43ab2f70698f07a3147ff68f09befc94467925de6654ebddfc09c5592ad"
+    },
+    {
+      "path": "release/summary.json",
+      "bytes": 82664,
+      "sha256": "c9b4b8576bec4827a36c0560f470174a600447695b5ac243006b16dd1f81d046"
+    },
+    {
+      "path": "release/validator-export-manifest.json",
+      "bytes": 905,
+      "sha256": "adc2f364e269ce63785cbca399a2329a25bba9c938e2b38f476b5ccaa3cb55f7"
+    },
+    {
+      "path": "tables/analysis-role-summary.csv",
+      "bytes": 1575,
+      "sha256": "9ee0a2cacf38305499b756f89fa908493b8671f85d402cf3d8160f2d1bda49fe"
+    },
+    {
+      "path": "tables/india-paired-latency-summary.csv",
+      "bytes": 225,
+      "sha256": "13d4e8c9b1d2025bb134b373b2d13bc275f7f1e7aa39c7414ba1cdde4fc904b3"
+    },
+    {
+      "path": "tables/paired-flash-pro-outcomes.csv",
+      "bytes": 134,
+      "sha256": "6edd5f201002b84e42f95db02ffb4d3453b36f4fa7660a694a36522d45cc741e"
+    },
+    {
+      "path": "tables/primary-by-model-family.csv",
+      "bytes": 2869,
+      "sha256": "d7fd5507ff066929c40423a30b2f1c8cbc5e49e3d269a29950b4e2ba1ae4f72f"
+    },
+    {
+      "path": "tables/primary-by-model-position.csv",
+      "bytes": 2355,
+      "sha256": "c01168ed1e08268fa022a6cbfc5d7c098bf556c8ae58b3dac412e6550448339b"
+    },
+    {
+      "path": "tables/primary-by-model-tier.csv",
+      "bytes": 2853,
+      "sha256": "accb44c4ee5d91a293ad13b22318543bc9de570a9a79ae04768bfaff7ddcd357"
+    },
+    {
+      "path": "tables/primary-by-model.csv",
+      "bytes": 1337,
+      "sha256": "5294f629951f4c567ae089b04b6dd6653848937f12b485c04666fde6635854d8"
+    },
+    {
+      "path": "tables/primary-funnel.csv",
+      "bytes": 143,
+      "sha256": "9ba764c184cca85045afa0e11fcd6e6c7b32e7748dfb5362330adcc82293c061"
+    },
+    {
+      "path": "template-bindings.required.json",
+      "bytes": 626,
+      "sha256": "89d7927e88fd34276ab3b12002ba7e60b15d1f2904374f26a3142a934490dae5"
+    },
+    {
+      "path": "wordpress-metadata.json",
+      "bytes": 1999,
+      "sha256": "6c0c4c6c05a1e481a6de82044ecf55ec0e89be000495745fd918005dab969a6f"
+    }
+  ]
+}

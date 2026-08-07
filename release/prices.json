@@ -1,0 +1,16 @@
+{
+  "snapshot_date": "2026-08-06",
+  "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "currency": "USD",
+  "per_million_tokens": {
+    "deepseek-v4-flash": {
+      "input_cache_miss": 0.14,
+      "output": 0.28
+    },
+    "deepseek-v4-pro": {
+      "input_cache_miss": 0.435,
+      "output": 0.87
+    }
+  },
+  "estimate_semantics": "Each non-null row value is a dated cache-miss upper-bound estimate derived from observed usage. Aggregates expose observed and missing row counts; a full-group upper bound is reported only when every row has a cost value."
+}

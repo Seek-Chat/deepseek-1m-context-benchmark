@@ -1,0 +1,2522 @@
+{
+  "release_schema_version": "1.0.0",
+  "release_version": "1.0.0",
+  "synthetic_test_data": false,
+  "protocol_id": "deepseek-v4-long-context-retrieval-v1.1.0",
+  "protocol_frozen_on": "2026-08-06",
+  "generated_at_utc": "2026-08-07T01:44:06.304Z",
+  "run_window_utc": {
+    "started_at": "2026-08-06T20:17:02.706Z",
+    "finished_at": "2026-08-07T00:07:44.737Z"
+  },
+  "source_hashes": {
+    "results_csv": "c788a45e7293d9c7bdf989ae70e22ea7af2d6c9d5d459b4316c318230177d688",
+    "results_jsonl": "7a63eecadb63229db64361432344c7775134c64de3147f68fd2168569079461d",
+    "validator_summary_json": "0ffd9b6f6493675cb2384997924507e920da6d3cc5a07591dff2363cad983a68",
+    "validation_report_json": "52e8bd9a4b19c7ed4ab061778ea4e79a43c1b926a3eceb9c01822294e34a4e07",
+    "validation_export_manifest_json": "adc2f364e269ce63785cbca399a2329a25bba9c938e2b38f476b5ccaa3cb55f7",
+    "protocol_json": "39c68bfc607157011012dc47d59524dcf3d5d7155071e6862c5038410d642c16",
+    "calibration_json": "0d8265a9f74bb39d9b1947e90e041dc330dcdb9b445d2d82a27da378f3bd88b2",
+    "publication_safe_archive_sha256": "38337e1213e2cf7ba7de8f21703e11772eddb71326361a66f27f7a8d0c114dcb"
+  },
+  "counts": {
+    "planned_calls": 344,
+    "terminal_rows": 344,
+    "pilot_excluded": 20,
+    "primary_accuracy": 288,
+    "india_latency_validation": 36
+  },
+  "overall_terminal_records": {
+    "attempts": 344,
+    "transport_complete": 344,
+    "exact_matches": 190,
+    "exact_match_rate": 0.5523255813953488,
+    "exact_match_wilson_95": {
+      "low": 0.4994885210828956,
+      "high": 0.6040069050289105
+    },
+    "valid_json": 344,
+    "valid_json_rate": 1,
+    "exact_key_sets": 344,
+    "exact_key_set_rate": 1,
+    "matched_fields": 1459,
+    "total_fields": 1988,
+    "field_accuracy": 0.7339034205231388,
+    "latency": {
+      "first_answer_token": {
+        "n": 344,
+        "min_ms": 812,
+        "p50_ms": 9090,
+        "p95_ms": 162353,
+        "max_ms": 200150
+      },
+      "end_to_end": {
+        "n": 344,
+        "min_ms": 1216,
+        "p50_ms": 9672,
+        "p95_ms": 162935,
+        "max_ms": 200806
+      }
+    },
+    "usage_observed_rows": 344,
+    "usage_missing_rows": 0,
+    "usage_coverage_complete": true,
+    "prompt_tokens_known_usage_total": 138789468,
+    "cache_hit_tokens_known_usage_total": 0,
+    "cache_miss_tokens_known_usage_total": 138789468,
+    "completion_tokens_known_usage_total": 17715,
+    "prompt_tokens": 138789468,
+    "cache_hit_tokens": 0,
+    "cache_miss_tokens": 138789468,
+    "completion_tokens": 17715,
+    "cost_observed_rows": 344,
+    "cost_missing_rows": 0,
+    "cost_coverage_complete": true,
+    "estimated_provider_cost_usd_cache_miss_known_usage_total": 39.913229,
+    "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116026828,
+    "estimated_provider_cost_usd_cache_miss_upper_bound": 39.913229
+  },
+  "pilot_excluded": {
+    "attempts": 20,
+    "transport_complete": 20,
+    "exact_matches": 12,
+    "exact_match_rate": 0.6,
+    "exact_match_wilson_95": {
+      "low": 0.38658150076225317,
+      "high": 0.7811934676271829
+    },
+    "valid_json": 20,
+    "valid_json_rate": 1,
+    "exact_key_sets": 20,
+    "exact_key_set_rate": 1,
+    "matched_fields": 76,
+    "total_fields": 116,
+    "field_accuracy": 0.6551724137931034,
+    "latency": {
+      "first_answer_token": {
+        "n": 20,
+        "min_ms": 812,
+        "p50_ms": 1836,
+        "p95_ms": 81262,
+        "max_ms": 164330
+      },
+      "end_to_end": {
+        "n": 20,
+        "min_ms": 1216,
+        "p50_ms": 2249,
+        "p95_ms": 82329,
+        "max_ms": 164836
+      }
+    },
+    "usage_observed_rows": 20,
+    "usage_missing_rows": 0,
+    "usage_coverage_complete": true,
+    "prompt_tokens_known_usage_total": 4312998,
+    "cache_hit_tokens_known_usage_total": 0,
+    "cache_miss_tokens_known_usage_total": 4312998,
+    "completion_tokens_known_usage_total": 1014,
+    "prompt_tokens": 4312998,
+    "cache_hit_tokens": 0,
+    "cache_miss_tokens": 4312998,
+    "completion_tokens": 1014,
+    "cost_observed_rows": 20,
+    "cost_missing_rows": 0,
+    "cost_coverage_complete": true,
+    "estimated_provider_cost_usd_cache_miss_known_usage_total": 1.240633,
+    "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.06203165,
+    "estimated_provider_cost_usd_cache_miss_upper_bound": 1.240633,
+    "included_in_primary_accuracy": false,
+    "regions": [
+      {
+        "group": {
+          "region_vantage": "ap-south-1"
+        },
+        "attempts": 10,
+        "transport_complete": 10,
+        "exact_matches": 6,
+        "exact_match_rate": 0.6,
+        "exact_match_wilson_95": {
+          "low": 0.31267376973365824,
+          "high": 0.8318196702937638
+        },
+        "valid_json": 10,
+        "valid_json_rate": 1,
+        "exact_key_sets": 10,
+        "exact_key_set_rate": 1,
+        "matched_fields": 38,
+        "total_fields": 58,
+        "field_accuracy": 0.6551724137931034,
+        "latency": {
+          "first_answer_token": {
+            "n": 10,
+            "min_ms": 812,
+            "p50_ms": 1836,
+            "p95_ms": 164330,
+            "max_ms": 164330
+          },
+          "end_to_end": {
+            "n": 10,
+            "min_ms": 1216,
+            "p50_ms": 2249,
+            "p95_ms": 164836,
+            "max_ms": 164836
+          }
+        },
+        "usage_observed_rows": 10,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 2156506,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 2156506,
+        "completion_tokens_known_usage_total": 507,
+        "prompt_tokens": 2156506,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 2156506,
+        "completion_tokens": 507,
+        "cost_observed_rows": 10,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.620318,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.0620318,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.620318
+      },
+      {
+        "group": {
+          "region_vantage": "us-east-1"
+        },
+        "attempts": 10,
+        "transport_complete": 10,
+        "exact_matches": 6,
+        "exact_match_rate": 0.6,
+        "exact_match_wilson_95": {
+          "low": 0.31267376973365824,
+          "high": 0.8318196702937638
+        },
+        "valid_json": 10,
+        "valid_json_rate": 1,
+        "exact_key_sets": 10,
+        "exact_key_set_rate": 1,
+        "matched_fields": 38,
+        "total_fields": 58,
+        "field_accuracy": 0.6551724137931034,
+        "latency": {
+          "first_answer_token": {
+            "n": 10,
+            "min_ms": 960,
+            "p50_ms": 1700,
+            "p95_ms": 81262,
+            "max_ms": 81262
+          },
+          "end_to_end": {
+            "n": 10,
+            "min_ms": 1367,
+            "p50_ms": 2022,
+            "p95_ms": 82329,
+            "max_ms": 82329
+          }
+        },
+        "usage_observed_rows": 10,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 2156492,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 2156492,
+        "completion_tokens_known_usage_total": 507,
+        "prompt_tokens": 2156492,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 2156492,
+        "completion_tokens": 507,
+        "cost_observed_rows": 10,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.620315,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.0620315,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.620315
+      }
+    ]
+  },
+  "primary_accuracy": {
+    "attempts": 288,
+    "transport_complete": 288,
+    "exact_matches": 152,
+    "exact_match_rate": 0.5277777777777778,
+    "exact_match_wilson_95": {
+      "low": 0.4701348873220347,
+      "high": 0.5846894000312924
+    },
+    "valid_json": 288,
+    "valid_json_rate": 1,
+    "exact_key_sets": 288,
+    "exact_key_set_rate": 1,
+    "matched_fields": 1194,
+    "total_fields": 1656,
+    "field_accuracy": 0.7210144927536232,
+    "latency": {
+      "first_answer_token": {
+        "n": 288,
+        "min_ms": 912,
+        "p50_ms": 12108,
+        "p95_ms": 161711,
+        "max_ms": 200150
+      },
+      "end_to_end": {
+        "n": 288,
+        "min_ms": 1349,
+        "p50_ms": 12748,
+        "p95_ms": 162295,
+        "max_ms": 200806
+      }
+    },
+    "usage_observed_rows": 288,
+    "usage_missing_rows": 0,
+    "usage_coverage_complete": true,
+    "prompt_tokens_known_usage_total": 116798344,
+    "cache_hit_tokens_known_usage_total": 0,
+    "cache_miss_tokens_known_usage_total": 116798344,
+    "completion_tokens_known_usage_total": 15139,
+    "prompt_tokens": 116798344,
+    "cache_hit_tokens": 0,
+    "cache_miss_tokens": 116798344,
+    "completion_tokens": 15139,
+    "cost_observed_rows": 288,
+    "cost_missing_rows": 0,
+    "cost_coverage_complete": true,
+    "estimated_provider_cost_usd_cache_miss_known_usage_total": 33.589136,
+    "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116628944,
+    "estimated_provider_cost_usd_cache_miss_upper_bound": 33.589136,
+    "denominator": 288,
+    "network_vantage": "us-east-1",
+    "by_model": [
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash"
+        },
+        "attempts": 144,
+        "transport_complete": 144,
+        "exact_matches": 71,
+        "exact_match_rate": 0.4930555555555556,
+        "exact_match_wilson_95": {
+          "low": 0.4126463655407692,
+          "high": 0.5738256294195508
+        },
+        "valid_json": 144,
+        "valid_json_rate": 1,
+        "exact_key_sets": 144,
+        "exact_key_set_rate": 1,
+        "matched_fields": 584,
+        "total_fields": 828,
+        "field_accuracy": 0.7053140096618358,
+        "latency": {
+          "first_answer_token": {
+            "n": 144,
+            "min_ms": 912,
+            "p50_ms": 6608,
+            "p95_ms": 84135,
+            "max_ms": 90976
+          },
+          "end_to_end": {
+            "n": 144,
+            "min_ms": 1349,
+            "p50_ms": 7123,
+            "p95_ms": 84890,
+            "max_ms": 91551
+          }
+        },
+        "usage_observed_rows": 144,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 58399172,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 58399172,
+        "completion_tokens_known_usage_total": 6274,
+        "prompt_tokens": 58399172,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 58399172,
+        "completion_tokens": 6274,
+        "cost_observed_rows": 144,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.177713,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056789674,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.177713
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro"
+        },
+        "attempts": 144,
+        "transport_complete": 144,
+        "exact_matches": 81,
+        "exact_match_rate": 0.5625,
+        "exact_match_wilson_95": {
+          "low": 0.4808944747721227,
+          "high": 0.6408575705849976
+        },
+        "valid_json": 144,
+        "valid_json_rate": 1,
+        "exact_key_sets": 144,
+        "exact_key_set_rate": 1,
+        "matched_fields": 610,
+        "total_fields": 828,
+        "field_accuracy": 0.7367149758454107,
+        "latency": {
+          "first_answer_token": {
+            "n": 144,
+            "min_ms": 1494,
+            "p50_ms": 14498,
+            "p95_ms": 167544,
+            "max_ms": 200150
+          },
+          "end_to_end": {
+            "n": 144,
+            "min_ms": 2027,
+            "p50_ms": 15073,
+            "p95_ms": 168276,
+            "max_ms": 200806
+          }
+        },
+        "usage_observed_rows": 144,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 58399172,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 58399172,
+        "completion_tokens_known_usage_total": 8865,
+        "prompt_tokens": 58399172,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 58399172,
+        "completion_tokens": 8865,
+        "cost_observed_rows": 144,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 25.411423,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176468215,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 25.411423
+      }
+    ],
+    "by_model_tier": [
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "tier_id": "128k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 22,
+        "exact_match_rate": 0.6111111111111112,
+        "exact_match_wilson_95": {
+          "low": 0.44864459096605147,
+          "high": 0.75215126934629
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 162,
+        "total_fields": 207,
+        "field_accuracy": 0.782608695652174,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 2043,
+            "p50_ms": 5563,
+            "p95_ms": 7101,
+            "max_ms": 7297
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 2382,
+            "p50_ms": 5988,
+            "p95_ms": 7538,
+            "max_ms": 7686
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 4609953,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 4609953,
+        "completion_tokens_known_usage_total": 1574,
+        "prompt_tokens": 4609953,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 4609953,
+        "completion_tokens": 1574,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.645852,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.017940333,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.645852
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "tier_id": "32k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 24,
+        "exact_match_rate": 0.6666666666666666,
+        "exact_match_wilson_95": {
+          "low": 0.5033399787115652,
+          "high": 0.7978538117569468
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 157,
+        "total_fields": 207,
+        "field_accuracy": 0.7584541062801933,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 912,
+            "p50_ms": 1586,
+            "p95_ms": 2103,
+            "max_ms": 2271
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 1349,
+            "p50_ms": 1934,
+            "p95_ms": 2615,
+            "max_ms": 2623
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 1153649,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 1153649,
+        "completion_tokens_known_usage_total": 1574,
+        "prompt_tokens": 1153649,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 1153649,
+        "completion_tokens": 1574,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.161968,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.004499111,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.161968
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "tier_id": "512k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 15,
+        "exact_match_rate": 0.4166666666666667,
+        "exact_match_wilson_95": {
+          "low": 0.2714056205144606,
+          "high": 0.5779974842512834
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 142,
+        "total_fields": 207,
+        "field_accuracy": 0.6859903381642513,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 5486,
+            "p50_ms": 11295,
+            "p95_ms": 33844,
+            "max_ms": 33920
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 6024,
+            "p50_ms": 12387,
+            "p95_ms": 34483,
+            "max_ms": 34660
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 18433800,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 18433800,
+        "completion_tokens_known_usage_total": 1562,
+        "prompt_tokens": 18433800,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 18433800,
+        "completion_tokens": 1562,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.581188,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.071699667,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.581188
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "tier_id": "950k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 10,
+        "exact_match_rate": 0.2777777777777778,
+        "exact_match_wilson_95": {
+          "low": 0.1584833794013461,
+          "high": 0.43992489997397105
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 123,
+        "total_fields": 207,
+        "field_accuracy": 0.5942028985507246,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 14928,
+            "p50_ms": 81759,
+            "p95_ms": 90394,
+            "max_ms": 90976
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 15825,
+            "p50_ms": 82407,
+            "p95_ms": 91214,
+            "max_ms": 91551
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 34201770,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 34201770,
+        "completion_tokens_known_usage_total": 1564,
+        "prompt_tokens": 34201770,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 34201770,
+        "completion_tokens": 1564,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 4.788705,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.133019583,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 4.788705
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "tier_id": "128k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 22,
+        "exact_match_rate": 0.6111111111111112,
+        "exact_match_wilson_95": {
+          "low": 0.44864459096605147,
+          "high": 0.75215126934629
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 162,
+        "total_fields": 207,
+        "field_accuracy": 0.782608695652174,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 2918,
+            "p50_ms": 12038,
+            "p95_ms": 20829,
+            "max_ms": 21656
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 3384,
+            "p50_ms": 12691,
+            "p95_ms": 21512,
+            "max_ms": 22787
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 4609953,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 4609953,
+        "completion_tokens_known_usage_total": 2205,
+        "prompt_tokens": 4609953,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 4609953,
+        "completion_tokens": 2205,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.007266,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.055757389,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.007266
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "tier_id": "32k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 26,
+        "exact_match_rate": 0.7222222222222222,
+        "exact_match_wilson_95": {
+          "low": 0.5600751000260289,
+          "high": 0.841516620598654
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 161,
+        "total_fields": 207,
+        "field_accuracy": 0.7777777777777778,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 1494,
+            "p50_ms": 3246,
+            "p95_ms": 4990,
+            "max_ms": 51545
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 2027,
+            "p50_ms": 3893,
+            "p95_ms": 5594,
+            "max_ms": 52066
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 1153649,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 1153649,
+        "completion_tokens_known_usage_total": 2178,
+        "prompt_tokens": 1153649,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 1153649,
+        "completion_tokens": 2178,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.503749,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.013993028,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.503749
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "tier_id": "512k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 17,
+        "exact_match_rate": 0.4722222222222222,
+        "exact_match_wilson_95": {
+          "low": 0.31986041515179053,
+          "high": 0.629940619770124
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 143,
+        "total_fields": 207,
+        "field_accuracy": 0.6908212560386473,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 12809,
+            "p50_ms": 66688,
+            "p95_ms": 123399,
+            "max_ms": 125262
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 13479,
+            "p50_ms": 67351,
+            "p95_ms": 124013,
+            "max_ms": 125822
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 18433800,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 18433800,
+        "completion_tokens_known_usage_total": 2241,
+        "prompt_tokens": 18433800,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 18433800,
+        "completion_tokens": 2241,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.020669,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.222796361,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.020669
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "tier_id": "950k"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 16,
+        "exact_match_rate": 0.4444444444444444,
+        "exact_match_wilson_95": {
+          "low": 0.2954126874008022,
+          "high": 0.6041893824430271
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 144,
+        "total_fields": 207,
+        "field_accuracy": 0.6956521739130435,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 26445,
+            "p50_ms": 157805,
+            "p95_ms": 185552,
+            "max_ms": 200150
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 27027,
+            "p50_ms": 158495,
+            "p95_ms": 186195,
+            "max_ms": 200806
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 34201770,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 34201770,
+        "completion_tokens_known_usage_total": 2241,
+        "prompt_tokens": 34201770,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 34201770,
+        "completion_tokens": 2241,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 14.879739,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.413326083,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 14.879739
+      }
+    ],
+    "by_model_family": [
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "family_id": "event_ordering"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 14,
+        "exact_match_rate": 0.3888888888888889,
+        "exact_match_wilson_95": {
+          "low": 0.24784873065371,
+          "high": 0.5513554090339485
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 75,
+        "total_fields": 108,
+        "field_accuracy": 0.6944444444444444,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 1407,
+            "p50_ms": 6620,
+            "p95_ms": 83352,
+            "max_ms": 83391
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 1934,
+            "p50_ms": 7223,
+            "p95_ms": 84190,
+            "max_ms": 84305
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14599424,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14599424,
+        "completion_tokens_known_usage_total": 1994,
+        "prompt_tokens": 14599424,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14599424,
+        "completion_tokens": 1994,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.044498,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056791611,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.044498
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "family_id": "latest_version"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 32,
+        "exact_match_rate": 0.8888888888888888,
+        "exact_match_wilson_95": {
+          "low": 0.7468519140963513,
+          "high": 0.9559335969968435
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 238,
+        "total_fields": 252,
+        "field_accuracy": 0.9444444444444444,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 1140,
+            "p50_ms": 6608,
+            "p95_ms": 90394,
+            "max_ms": 90976
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 1538,
+            "p50_ms": 7123,
+            "p95_ms": 91214,
+            "max_ms": 91551
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14599626,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14599626,
+        "completion_tokens_known_usage_total": 1403,
+        "prompt_tokens": 14599626,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14599626,
+        "completion_tokens": 1403,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.044357,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056787694,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.044357
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "family_id": "multi_hop_join"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 0,
+        "exact_match_rate": 0,
+        "exact_match_wilson_95": {
+          "low": 0,
+          "high": 0.09641862859446367
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 78,
+        "total_fields": 252,
+        "field_accuracy": 0.30952380952380953,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 912,
+            "p50_ms": 5979,
+            "p95_ms": 83577,
+            "max_ms": 88326
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 1349,
+            "p50_ms": 6514,
+            "p95_ms": 84279,
+            "max_ms": 89146
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14600007,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14600007,
+        "completion_tokens_known_usage_total": 1584,
+        "prompt_tokens": 14600007,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14600007,
+        "completion_tokens": 1584,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.044462,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056790611,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.044462
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "family_id": "single_record"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 25,
+        "exact_match_rate": 0.6944444444444444,
+        "exact_match_wilson_95": {
+          "low": 0.5314372714948966,
+          "high": 0.8199554840517008
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 193,
+        "total_fields": 216,
+        "field_accuracy": 0.8935185185185185,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 1033,
+            "p50_ms": 6268,
+            "p95_ms": 84135,
+            "max_ms": 84623
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 1376,
+            "p50_ms": 6760,
+            "p95_ms": 84890,
+            "max_ms": 85403
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14600115,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14600115,
+        "completion_tokens_known_usage_total": 1293,
+        "prompt_tokens": 14600115,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14600115,
+        "completion_tokens": 1293,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.044396,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056788778,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.044396
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "family_id": "event_ordering"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 24,
+        "exact_match_rate": 0.6666666666666666,
+        "exact_match_wilson_95": {
+          "low": 0.5033399787115652,
+          "high": 0.7978538117569468
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 87,
+        "total_fields": 108,
+        "field_accuracy": 0.8055555555555556,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 1494,
+            "p50_ms": 14517,
+            "p95_ms": 168472,
+            "max_ms": 200150
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 2227,
+            "p50_ms": 15249,
+            "p95_ms": 169206,
+            "max_ms": 200806
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14599424,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14599424,
+        "completion_tokens_known_usage_total": 2429,
+        "prompt_tokens": 14599424,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14599424,
+        "completion_tokens": 2429,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 6.35288,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176468889,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 6.35288
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "family_id": "latest_version"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 30,
+        "exact_match_rate": 0.8333333333333334,
+        "exact_match_wilson_95": {
+          "low": 0.6810920568872054,
+          "high": 0.9212955240498188
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 236,
+        "total_fields": 252,
+        "field_accuracy": 0.9365079365079365,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 1565,
+            "p50_ms": 13128,
+            "p95_ms": 171382,
+            "max_ms": 185552
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 2027,
+            "p50_ms": 13758,
+            "p95_ms": 172030,
+            "max_ms": 186195
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14599626,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14599626,
+        "completion_tokens_known_usage_total": 2196,
+        "prompt_tokens": 14599626,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14599626,
+        "completion_tokens": 2196,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 6.352764,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176465667,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 6.352764
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "family_id": "multi_hop_join"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 0,
+        "exact_match_rate": 0,
+        "exact_match_wilson_95": {
+          "low": 0,
+          "high": 0.09641862859446367
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 80,
+        "total_fields": 252,
+        "field_accuracy": 0.31746031746031744,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 1545,
+            "p50_ms": 14533,
+            "p95_ms": 165658,
+            "max_ms": 167895
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 2115,
+            "p50_ms": 15112,
+            "p95_ms": 166326,
+            "max_ms": 168507
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14600007,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14600007,
+        "completion_tokens_known_usage_total": 2375,
+        "prompt_tokens": 14600007,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14600007,
+        "completion_tokens": 2375,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 6.353089,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176474694,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 6.353089
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "family_id": "single_record"
+        },
+        "attempts": 36,
+        "transport_complete": 36,
+        "exact_matches": 27,
+        "exact_match_rate": 0.75,
+        "exact_match_wilson_95": {
+          "low": 0.5892954623327166,
+          "high": 0.8624952233700517
+        },
+        "valid_json": 36,
+        "valid_json_rate": 1,
+        "exact_key_sets": 36,
+        "exact_key_set_rate": 1,
+        "matched_fields": 207,
+        "total_fields": 216,
+        "field_accuracy": 0.9583333333333334,
+        "latency": {
+          "first_answer_token": {
+            "n": 36,
+            "min_ms": 2805,
+            "p50_ms": 13545,
+            "p95_ms": 164240,
+            "max_ms": 185396
+          },
+          "end_to_end": {
+            "n": 36,
+            "min_ms": 3332,
+            "p50_ms": 14475,
+            "p95_ms": 164926,
+            "max_ms": 186067
+          }
+        },
+        "usage_observed_rows": 36,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 14600115,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 14600115,
+        "completion_tokens_known_usage_total": 1865,
+        "prompt_tokens": 14600115,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 14600115,
+        "completion_tokens": 1865,
+        "cost_observed_rows": 36,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 6.35269,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176463611,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 6.35269
+      }
+    ],
+    "by_model_position": [
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "position_id": "beginning"
+        },
+        "attempts": 48,
+        "transport_complete": 48,
+        "exact_matches": 28,
+        "exact_match_rate": 0.5833333333333334,
+        "exact_match_wilson_95": {
+          "low": 0.4428133228397628,
+          "high": 0.7115033222158844
+        },
+        "valid_json": 48,
+        "valid_json_rate": 1,
+        "exact_key_sets": 48,
+        "exact_key_set_rate": 1,
+        "matched_fields": 206,
+        "total_fields": 276,
+        "field_accuracy": 0.7463768115942029,
+        "latency": {
+          "first_answer_token": {
+            "n": 48,
+            "min_ms": 912,
+            "p50_ms": 6666,
+            "p95_ms": 83866,
+            "max_ms": 84739
+          },
+          "end_to_end": {
+            "n": 48,
+            "min_ms": 1387,
+            "p50_ms": 7224,
+            "p95_ms": 84641,
+            "max_ms": 85444
+          }
+        },
+        "usage_observed_rows": 48,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 19466371,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 19466371,
+        "completion_tokens_known_usage_total": 2091,
+        "prompt_tokens": 19466371,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 19466371,
+        "completion_tokens": 2091,
+        "cost_observed_rows": 48,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.7259,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056789583,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.7259
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "position_id": "end"
+        },
+        "attempts": 48,
+        "transport_complete": 48,
+        "exact_matches": 23,
+        "exact_match_rate": 0.4791666666666667,
+        "exact_match_wilson_95": {
+          "low": 0.34471316176951616,
+          "high": 0.616707676966572
+        },
+        "valid_json": 48,
+        "valid_json_rate": 1,
+        "exact_key_sets": 48,
+        "exact_key_set_rate": 1,
+        "matched_fields": 184,
+        "total_fields": 276,
+        "field_accuracy": 0.6666666666666666,
+        "latency": {
+          "first_answer_token": {
+            "n": 48,
+            "min_ms": 974,
+            "p50_ms": 6620,
+            "p95_ms": 84135,
+            "max_ms": 88326
+          },
+          "end_to_end": {
+            "n": 48,
+            "min_ms": 1349,
+            "p50_ms": 7223,
+            "p95_ms": 84890,
+            "max_ms": 89146
+          }
+        },
+        "usage_observed_rows": 48,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 19466404,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 19466404,
+        "completion_tokens_known_usage_total": 2090,
+        "prompt_tokens": 19466404,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 19466404,
+        "completion_tokens": 2090,
+        "cost_observed_rows": 48,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.725909,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056789771,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.725909
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "position_id": "middle"
+        },
+        "attempts": 48,
+        "transport_complete": 48,
+        "exact_matches": 20,
+        "exact_match_rate": 0.4166666666666667,
+        "exact_match_wilson_95": {
+          "low": 0.2884966777841157,
+          "high": 0.5571866771602373
+        },
+        "valid_json": 48,
+        "valid_json_rate": 1,
+        "exact_key_sets": 48,
+        "exact_key_set_rate": 1,
+        "matched_fields": 194,
+        "total_fields": 276,
+        "field_accuracy": 0.7028985507246377,
+        "latency": {
+          "first_answer_token": {
+            "n": 48,
+            "min_ms": 1103,
+            "p50_ms": 6253,
+            "p95_ms": 84623,
+            "max_ms": 90976
+          },
+          "end_to_end": {
+            "n": 48,
+            "min_ms": 1516,
+            "p50_ms": 6780,
+            "p95_ms": 85403,
+            "max_ms": 91551
+          }
+        },
+        "usage_observed_rows": 48,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 19466397,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 19466397,
+        "completion_tokens_known_usage_total": 2093,
+        "prompt_tokens": 19466397,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 19466397,
+        "completion_tokens": 2093,
+        "cost_observed_rows": 48,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.725904,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.056789667,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.725904
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "position_id": "beginning"
+        },
+        "attempts": 48,
+        "transport_complete": 48,
+        "exact_matches": 31,
+        "exact_match_rate": 0.6458333333333334,
+        "exact_match_wilson_95": {
+          "low": 0.504390570103431,
+          "high": 0.7656635587439515
+        },
+        "valid_json": 48,
+        "valid_json_rate": 1,
+        "exact_key_sets": 48,
+        "exact_key_set_rate": 1,
+        "matched_fields": 207,
+        "total_fields": 276,
+        "field_accuracy": 0.75,
+        "latency": {
+          "first_answer_token": {
+            "n": 48,
+            "min_ms": 1494,
+            "p50_ms": 14517,
+            "p95_ms": 168472,
+            "max_ms": 185396
+          },
+          "end_to_end": {
+            "n": 48,
+            "min_ms": 2027,
+            "p50_ms": 15249,
+            "p95_ms": 169206,
+            "max_ms": 186067
+          }
+        },
+        "usage_observed_rows": 48,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 19466371,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 19466371,
+        "completion_tokens_known_usage_total": 2955,
+        "prompt_tokens": 19466371,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 19466371,
+        "completion_tokens": 2955,
+        "cost_observed_rows": 48,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.470467,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176468063,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.470467
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "position_id": "end"
+        },
+        "attempts": 48,
+        "transport_complete": 48,
+        "exact_matches": 27,
+        "exact_match_rate": 0.5625,
+        "exact_match_wilson_95": {
+          "low": 0.42275017419827776,
+          "high": 0.6929873095934576
+        },
+        "valid_json": 48,
+        "valid_json_rate": 1,
+        "exact_key_sets": 48,
+        "exact_key_set_rate": 1,
+        "matched_fields": 208,
+        "total_fields": 276,
+        "field_accuracy": 0.7536231884057971,
+        "latency": {
+          "first_answer_token": {
+            "n": 48,
+            "min_ms": 1545,
+            "p50_ms": 15402,
+            "p95_ms": 164199,
+            "max_ms": 185552
+          },
+          "end_to_end": {
+            "n": 48,
+            "min_ms": 2115,
+            "p50_ms": 16109,
+            "p95_ms": 164897,
+            "max_ms": 186195
+          }
+        },
+        "usage_observed_rows": 48,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 19466404,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 19466404,
+        "completion_tokens_known_usage_total": 2948,
+        "prompt_tokens": 19466404,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 19466404,
+        "completion_tokens": 2948,
+        "cost_observed_rows": 48,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.470472,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176468167,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.470472
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "position_id": "middle"
+        },
+        "attempts": 48,
+        "transport_complete": 48,
+        "exact_matches": 23,
+        "exact_match_rate": 0.4791666666666667,
+        "exact_match_wilson_95": {
+          "low": 0.34471316176951616,
+          "high": 0.616707676966572
+        },
+        "valid_json": 48,
+        "valid_json_rate": 1,
+        "exact_key_sets": 48,
+        "exact_key_set_rate": 1,
+        "matched_fields": 195,
+        "total_fields": 276,
+        "field_accuracy": 0.7065217391304348,
+        "latency": {
+          "first_answer_token": {
+            "n": 48,
+            "min_ms": 1908,
+            "p50_ms": 13042,
+            "p95_ms": 167895,
+            "max_ms": 200150
+          },
+          "end_to_end": {
+            "n": 48,
+            "min_ms": 2361,
+            "p50_ms": 13674,
+            "p95_ms": 168507,
+            "max_ms": 200806
+          }
+        },
+        "usage_observed_rows": 48,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 19466397,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 19466397,
+        "completion_tokens_known_usage_total": 2962,
+        "prompt_tokens": 19466397,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 19466397,
+        "completion_tokens": 2962,
+        "cost_observed_rows": 48,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.470484,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.176468417,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.470484
+      }
+    ],
+    "by_tier": [
+      {
+        "group": {
+          "tier_id": "128k"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 44,
+        "exact_match_rate": 0.6111111111111112,
+        "exact_match_wilson_95": {
+          "low": 0.49562354994215396,
+          "high": 0.7153428561475221
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 324,
+        "total_fields": 414,
+        "field_accuracy": 0.782608695652174,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 2043,
+            "p50_ms": 5653,
+            "p95_ms": 15527,
+            "max_ms": 21656
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 2382,
+            "p50_ms": 6115,
+            "p95_ms": 16484,
+            "max_ms": 22787
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 9219906,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 9219906,
+        "completion_tokens_known_usage_total": 3779,
+        "prompt_tokens": 9219906,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 9219906,
+        "completion_tokens": 3779,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 2.653118,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.036848861,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 2.653118
+      },
+      {
+        "group": {
+          "tier_id": "32k"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 50,
+        "exact_match_rate": 0.6944444444444444,
+        "exact_match_wilson_95": {
+          "low": 0.5804575204088857,
+          "high": 0.7887336902480474
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 318,
+        "total_fields": 414,
+        "field_accuracy": 0.7681159420289855,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 912,
+            "p50_ms": 1817,
+            "p95_ms": 4158,
+            "max_ms": 51545
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 1349,
+            "p50_ms": 2361,
+            "p95_ms": 4917,
+            "max_ms": 52066
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 2307298,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 2307298,
+        "completion_tokens_known_usage_total": 3752,
+        "prompt_tokens": 2307298,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 2307298,
+        "completion_tokens": 3752,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.665717,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.009246069,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.665717
+      },
+      {
+        "group": {
+          "tier_id": "512k"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 32,
+        "exact_match_rate": 0.4444444444444444,
+        "exact_match_wilson_95": {
+          "low": 0.33539070561321394,
+          "high": 0.559126091341948
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 285,
+        "total_fields": 414,
+        "field_accuracy": 0.6884057971014492,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 5486,
+            "p50_ms": 29252,
+            "p95_ms": 92875,
+            "max_ms": 125262
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 6024,
+            "p50_ms": 29964,
+            "p95_ms": 93494,
+            "max_ms": 125822
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 36867600,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 36867600,
+        "completion_tokens_known_usage_total": 3803,
+        "prompt_tokens": 36867600,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 36867600,
+        "completion_tokens": 3803,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 10.601857,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.147248014,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 10.601857
+      },
+      {
+        "group": {
+          "tier_id": "950k"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 26,
+        "exact_match_rate": 0.3611111111111111,
+        "exact_match_wilson_95": {
+          "low": 0.25981679706174077,
+          "high": 0.4764751953261641
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 267,
+        "total_fields": 414,
+        "field_accuracy": 0.644927536231884,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 14928,
+            "p50_ms": 83337,
+            "p95_ms": 171382,
+            "max_ms": 200150
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 15825,
+            "p50_ms": 84040,
+            "p95_ms": 172030,
+            "max_ms": 200806
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 68403540,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 68403540,
+        "completion_tokens_known_usage_total": 3805,
+        "prompt_tokens": 68403540,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 68403540,
+        "completion_tokens": 3805,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 19.668444,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.273172833,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 19.668444
+      }
+    ],
+    "by_family": [
+      {
+        "group": {
+          "family_id": "event_ordering"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 38,
+        "exact_match_rate": 0.5277777777777778,
+        "exact_match_wilson_95": {
+          "low": 0.4140067049007661,
+          "high": 0.6387348966216531
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 162,
+        "total_fields": 216,
+        "field_accuracy": 0.75,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 1407,
+            "p50_ms": 12519,
+            "p95_ms": 164199,
+            "max_ms": 200150
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 1934,
+            "p50_ms": 13240,
+            "p95_ms": 164897,
+            "max_ms": 200806
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 29198848,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 29198848,
+        "completion_tokens_known_usage_total": 4423,
+        "prompt_tokens": 29198848,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 29198848,
+        "completion_tokens": 4423,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.397378,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.11663025,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.397378
+      },
+      {
+        "group": {
+          "family_id": "latest_version"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 62,
+        "exact_match_rate": 0.8611111111111112,
+        "exact_match_wilson_95": {
+          "low": 0.762868127494437,
+          "high": 0.9227726922970102
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 474,
+        "total_fields": 504,
+        "field_accuracy": 0.9404761904761905,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 1140,
+            "p50_ms": 7101,
+            "p95_ms": 159630,
+            "max_ms": 185552
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 1538,
+            "p50_ms": 7538,
+            "p95_ms": 160231,
+            "max_ms": 186195
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 29199252,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 29199252,
+        "completion_tokens_known_usage_total": 3599,
+        "prompt_tokens": 29199252,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 29199252,
+        "completion_tokens": 3599,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.397121,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116626681,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.397121
+      },
+      {
+        "group": {
+          "family_id": "multi_hop_join"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 0,
+        "exact_match_rate": 0,
+        "exact_match_wilson_95": {
+          "low": 0,
+          "high": 0.05065117259645781
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 158,
+        "total_fields": 504,
+        "field_accuracy": 0.3134920634920635,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 912,
+            "p50_ms": 14013,
+            "p95_ms": 162353,
+            "max_ms": 167895
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 1349,
+            "p50_ms": 14571,
+            "p95_ms": 162935,
+            "max_ms": 168507
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 29200014,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 29200014,
+        "completion_tokens_known_usage_total": 3959,
+        "prompt_tokens": 29200014,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 29200014,
+        "completion_tokens": 3959,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.397551,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116632653,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.397551
+      },
+      {
+        "group": {
+          "family_id": "single_record"
+        },
+        "attempts": 72,
+        "transport_complete": 72,
+        "exact_matches": 52,
+        "exact_match_rate": 0.7222222222222222,
+        "exact_match_wilson_95": {
+          "low": 0.6095356707476457,
+          "high": 0.8123971414317063
+        },
+        "valid_json": 72,
+        "valid_json_rate": 1,
+        "exact_key_sets": 72,
+        "exact_key_set_rate": 1,
+        "matched_fields": 400,
+        "total_fields": 432,
+        "field_accuracy": 0.9259259259259259,
+        "latency": {
+          "first_answer_token": {
+            "n": 72,
+            "min_ms": 1033,
+            "p50_ms": 9090,
+            "p95_ms": 152097,
+            "max_ms": 185396
+          },
+          "end_to_end": {
+            "n": 72,
+            "min_ms": 1376,
+            "p50_ms": 9763,
+            "p95_ms": 152733,
+            "max_ms": 186067
+          }
+        },
+        "usage_observed_rows": 72,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 29200230,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 29200230,
+        "completion_tokens_known_usage_total": 3158,
+        "prompt_tokens": 29200230,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 29200230,
+        "completion_tokens": 3158,
+        "cost_observed_rows": 72,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 8.397086,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116626194,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 8.397086
+      }
+    ],
+    "by_position": [
+      {
+        "group": {
+          "position_id": "beginning"
+        },
+        "attempts": 96,
+        "transport_complete": 96,
+        "exact_matches": 59,
+        "exact_match_rate": 0.6145833333333334,
+        "exact_match_wilson_95": {
+          "low": 0.5146070303586874,
+          "high": 0.7057423140905956
+        },
+        "valid_json": 96,
+        "valid_json_rate": 1,
+        "exact_key_sets": 96,
+        "exact_key_set_rate": 1,
+        "matched_fields": 413,
+        "total_fields": 552,
+        "field_accuracy": 0.7481884057971014,
+        "latency": {
+          "first_answer_token": {
+            "n": 96,
+            "min_ms": 912,
+            "p50_ms": 12038,
+            "p95_ms": 163147,
+            "max_ms": 185396
+          },
+          "end_to_end": {
+            "n": 96,
+            "min_ms": 1387,
+            "p50_ms": 12691,
+            "p95_ms": 163818,
+            "max_ms": 186067
+          }
+        },
+        "usage_observed_rows": 96,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 38932742,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 38932742,
+        "completion_tokens_known_usage_total": 5046,
+        "prompt_tokens": 38932742,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 38932742,
+        "completion_tokens": 5046,
+        "cost_observed_rows": 96,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 11.196367,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116628823,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 11.196367
+      },
+      {
+        "group": {
+          "position_id": "end"
+        },
+        "attempts": 96,
+        "transport_complete": 96,
+        "exact_matches": 50,
+        "exact_match_rate": 0.5208333333333334,
+        "exact_match_wilson_95": {
+          "low": 0.4220376770680893,
+          "high": 0.6180258401045079
+        },
+        "valid_json": 96,
+        "valid_json_rate": 1,
+        "exact_key_sets": 96,
+        "exact_key_set_rate": 1,
+        "matched_fields": 392,
+        "total_fields": 552,
+        "field_accuracy": 0.7101449275362319,
+        "latency": {
+          "first_answer_token": {
+            "n": 96,
+            "min_ms": 974,
+            "p50_ms": 9090,
+            "p95_ms": 159630,
+            "max_ms": 185552
+          },
+          "end_to_end": {
+            "n": 96,
+            "min_ms": 1349,
+            "p50_ms": 9672,
+            "p95_ms": 160231,
+            "max_ms": 186195
+          }
+        },
+        "usage_observed_rows": 96,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 38932808,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 38932808,
+        "completion_tokens_known_usage_total": 5038,
+        "prompt_tokens": 38932808,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 38932808,
+        "completion_tokens": 5038,
+        "cost_observed_rows": 96,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 11.196381,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116628969,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 11.196381
+      },
+      {
+        "group": {
+          "position_id": "middle"
+        },
+        "attempts": 96,
+        "transport_complete": 96,
+        "exact_matches": 43,
+        "exact_match_rate": 0.4479166666666667,
+        "exact_match_wilson_95": {
+          "low": 0.3523575930459819,
+          "high": 0.5474836140225261
+        },
+        "valid_json": 96,
+        "valid_json_rate": 1,
+        "exact_key_sets": 96,
+        "exact_key_set_rate": 1,
+        "matched_fields": 389,
+        "total_fields": 552,
+        "field_accuracy": 0.7047101449275363,
+        "latency": {
+          "first_answer_token": {
+            "n": 96,
+            "min_ms": 1103,
+            "p50_ms": 12809,
+            "p95_ms": 162710,
+            "max_ms": 200150
+          },
+          "end_to_end": {
+            "n": 96,
+            "min_ms": 1516,
+            "p50_ms": 13479,
+            "p95_ms": 163415,
+            "max_ms": 200806
+          }
+        },
+        "usage_observed_rows": 96,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 38932794,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 38932794,
+        "completion_tokens_known_usage_total": 5055,
+        "prompt_tokens": 38932794,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 38932794,
+        "completion_tokens": 5055,
+        "cost_observed_rows": 96,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 11.196388,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.116629042,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 11.196388
+      }
+    ],
+    "paired_flash_vs_pro": {
+      "both_pass": 62,
+      "flash_only_pass": 9,
+      "pro_only_pass": 19,
+      "both_fail": 54,
+      "complete_pairs": 144,
+      "flash_minus_pro_exact_pass_delta": -0.06944444444444445
+    }
+  },
+  "india_latency_validation": {
+    "attempts": 36,
+    "transport_complete": 36,
+    "exact_matches": 26,
+    "exact_match_rate": 0.7222222222222222,
+    "exact_match_wilson_95": {
+      "low": 0.5600751000260289,
+      "high": 0.841516620598654
+    },
+    "valid_json": 36,
+    "valid_json_rate": 1,
+    "exact_key_sets": 36,
+    "exact_key_set_rate": 1,
+    "matched_fields": 189,
+    "total_fields": 216,
+    "field_accuracy": 0.875,
+    "latency": {
+      "first_answer_token": {
+        "n": 36,
+        "min_ms": 1221,
+        "p50_ms": 3695,
+        "p95_ms": 163124,
+        "max_ms": 175376
+      },
+      "end_to_end": {
+        "n": 36,
+        "min_ms": 1596,
+        "p50_ms": 4165,
+        "p95_ms": 164039,
+        "max_ms": 176302
+      }
+    },
+    "usage_observed_rows": 36,
+    "usage_missing_rows": 0,
+    "usage_coverage_complete": true,
+    "prompt_tokens_known_usage_total": 17678126,
+    "cache_hit_tokens_known_usage_total": 0,
+    "cache_miss_tokens_known_usage_total": 17678126,
+    "completion_tokens_known_usage_total": 1562,
+    "prompt_tokens": 17678126,
+    "cache_hit_tokens": 0,
+    "cache_miss_tokens": 17678126,
+    "completion_tokens": 1562,
+    "cost_observed_rows": 36,
+    "cost_missing_rows": 0,
+    "cost_coverage_complete": true,
+    "estimated_provider_cost_usd_cache_miss_known_usage_total": 5.08346,
+    "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.141207222,
+    "estimated_provider_cost_usd_cache_miss_upper_bound": 5.08346,
+    "included_in_primary_accuracy": false,
+    "network_vantage": "ap-south-1",
+    "matched_pairs": 36,
+    "transport_complete_timing_pairs": 36,
+    "first_answer_delta_ms": {
+      "n": 36,
+      "min_ms": -136634,
+      "p50_ms": -523,
+      "p95_ms": 133688,
+      "max_ms": 148361
+    },
+    "end_to_end_delta_ms": {
+      "n": 36,
+      "min_ms": -136899,
+      "p50_ms": -490,
+      "p95_ms": 133927,
+      "max_ms": 148651
+    },
+    "by_model_tier": [
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "tier_id": "32k"
+        },
+        "attempts": 9,
+        "transport_complete": 9,
+        "exact_matches": 9,
+        "exact_match_rate": 1,
+        "exact_match_wilson_95": {
+          "low": 0.7008549515804559,
+          "high": 1
+        },
+        "valid_json": 9,
+        "valid_json_rate": 1,
+        "exact_key_sets": 9,
+        "exact_key_set_rate": 1,
+        "matched_fields": 54,
+        "total_fields": 54,
+        "field_accuracy": 1,
+        "latency": {
+          "first_answer_token": {
+            "n": 9,
+            "min_ms": 1300,
+            "p50_ms": 1775,
+            "p95_ms": 2256,
+            "max_ms": 2256
+          },
+          "end_to_end": {
+            "n": 9,
+            "min_ms": 1596,
+            "p50_ms": 2164,
+            "p95_ms": 2577,
+            "max_ms": 2577
+          }
+        },
+        "usage_observed_rows": 9,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 288534,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 288534,
+        "completion_tokens_known_usage_total": 324,
+        "prompt_tokens": 288534,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 288534,
+        "completion_tokens": 324,
+        "cost_observed_rows": 9,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.040491,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.004499,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.040491
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-flash",
+          "tier_id": "950k"
+        },
+        "attempts": 9,
+        "transport_complete": 9,
+        "exact_matches": 3,
+        "exact_match_rate": 0.3333333333333333,
+        "exact_match_wilson_95": {
+          "low": 0.1205838183869109,
+          "high": 0.6457978644196036
+        },
+        "valid_json": 9,
+        "valid_json_rate": 1,
+        "exact_key_sets": 9,
+        "exact_key_set_rate": 1,
+        "matched_fields": 34,
+        "total_fields": 54,
+        "field_accuracy": 0.6296296296296297,
+        "latency": {
+          "first_answer_token": {
+            "n": 9,
+            "min_ms": 13308,
+            "p50_ms": 75854,
+            "p95_ms": 83387,
+            "max_ms": 83387
+          },
+          "end_to_end": {
+            "n": 9,
+            "min_ms": 14132,
+            "p50_ms": 76368,
+            "p95_ms": 84144,
+            "max_ms": 84144
+          }
+        },
+        "usage_observed_rows": 9,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 8550529,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 8550529,
+        "completion_tokens_known_usage_total": 322,
+        "prompt_tokens": 8550529,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 8550529,
+        "completion_tokens": 322,
+        "cost_observed_rows": 9,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 1.19717,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.133018889,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 1.19717
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "tier_id": "32k"
+        },
+        "attempts": 9,
+        "transport_complete": 9,
+        "exact_matches": 9,
+        "exact_match_rate": 1,
+        "exact_match_wilson_95": {
+          "low": 0.7008549515804559,
+          "high": 1
+        },
+        "valid_json": 9,
+        "valid_json_rate": 1,
+        "exact_key_sets": 9,
+        "exact_key_set_rate": 1,
+        "matched_fields": 54,
+        "total_fields": 54,
+        "field_accuracy": 1,
+        "latency": {
+          "first_answer_token": {
+            "n": 9,
+            "min_ms": 1221,
+            "p50_ms": 2797,
+            "p95_ms": 3695,
+            "max_ms": 3695
+          },
+          "end_to_end": {
+            "n": 9,
+            "min_ms": 1740,
+            "p50_ms": 3346,
+            "p95_ms": 4165,
+            "max_ms": 4165
+          }
+        },
+        "usage_observed_rows": 9,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 288534,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 288534,
+        "completion_tokens_known_usage_total": 423,
+        "prompt_tokens": 288534,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 288534,
+        "completion_tokens": 423,
+        "cost_observed_rows": 9,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 0.125885,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.013987222,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 0.125885
+      },
+      {
+        "group": {
+          "model_id": "deepseek-v4-pro",
+          "tier_id": "950k"
+        },
+        "attempts": 9,
+        "transport_complete": 9,
+        "exact_matches": 5,
+        "exact_match_rate": 0.5555555555555556,
+        "exact_match_wilson_95": {
+          "low": 0.26665129349549305,
+          "high": 0.8112214789023355
+        },
+        "valid_json": 9,
+        "valid_json_rate": 1,
+        "exact_key_sets": 9,
+        "exact_key_set_rate": 1,
+        "matched_fields": 47,
+        "total_fields": 54,
+        "field_accuracy": 0.8703703703703703,
+        "latency": {
+          "first_answer_token": {
+            "n": 9,
+            "min_ms": 25496,
+            "p50_ms": 150860,
+            "p95_ms": 175376,
+            "max_ms": 175376
+          },
+          "end_to_end": {
+            "n": 9,
+            "min_ms": 26088,
+            "p50_ms": 151330,
+            "p95_ms": 176302,
+            "max_ms": 176302
+          }
+        },
+        "usage_observed_rows": 9,
+        "usage_missing_rows": 0,
+        "usage_coverage_complete": true,
+        "prompt_tokens_known_usage_total": 8550529,
+        "cache_hit_tokens_known_usage_total": 0,
+        "cache_miss_tokens_known_usage_total": 8550529,
+        "completion_tokens_known_usage_total": 493,
+        "prompt_tokens": 8550529,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 8550529,
+        "completion_tokens": 493,
+        "cost_observed_rows": 9,
+        "cost_missing_rows": 0,
+        "cost_coverage_complete": true,
+        "estimated_provider_cost_usd_cache_miss_known_usage_total": 3.719914,
+        "estimated_provider_cost_usd_cache_miss_known_usage_mean": 0.413323778,
+        "estimated_provider_cost_usd_cache_miss_upper_bound": 3.719914
+      }
+    ]
+  },
+  "model_routing_and_fingerprints": {
+    "deepseek-v4-flash|deepseek-v4-flash|fp_a18b46594c_prod0820_fp8_kvcache_20260402": 172,
+    "deepseek-v4-pro|deepseek-v4-pro|fp_9954b31ca7_prod0820_fp8_kvcache_20260402": 172
+  },
+  "routing": {
+    "requested_models": [
+      "deepseek-v4-flash",
+      "deepseek-v4-pro"
+    ],
+    "returned_models": [
+      "deepseek-v4-flash",
+      "deepseek-v4-pro"
+    ],
+    "fingerprint_split_count": 2
+  },
+  "pricing": {
+    "snapshot_date": "2026-08-06",
+    "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "currency": "USD",
+    "per_million_tokens": {
+      "deepseek-v4-flash": {
+        "input_cache_miss": 0.14,
+        "output": 0.28
+      },
+      "deepseek-v4-pro": {
+        "input_cache_miss": 0.435,
+        "output": 0.87
+      }
+    },
+    "estimate_semantics": "Each non-null row value is a dated cache-miss upper-bound estimate derived from observed usage. Aggregates expose observed and missing row counts; a full-group upper bound is reported only when every row has a cost value."
+  },
+  "validator": {
+    "schema_version": "1.0.0",
+    "full_run_complete": true,
+    "integrity_valid": true,
+    "errors": 0
+  },
+  "interpretation_boundaries": [
+    "Primary accuracy uses exactly 288 us-east-1 primary_accuracy rows.",
+    "The 20 pilot_excluded rows are preserved but excluded from every primary accuracy denominator.",
+    "The 36 ap-south-1 rows are a matched client network-vantage check, not a sample of Indian users or provider hosting.",
+    "Synthetic English records and strict JSON grading do not measure general model quality.",
+    "Latency belongs to this workload and narrow run window; it is not recurring reliability evidence.",
+    "Prices are dated and can change.",
+    "Cost totals with incomplete usage coverage are labeled known-usage partial sums and are never presented as full-run upper bounds.",
+    "Token and cache totals are reported as complete only when every row contains the full usage tuple; otherwise the release exposes known-usage totals with observed and missing row counts."
+  ]
+}

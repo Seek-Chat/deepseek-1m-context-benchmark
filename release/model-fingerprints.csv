@@ -1,0 +1,9 @@
+analysis_role,region_vantage,requested_model,returned_model,system_fingerprint,first_seen_utc,last_seen_utc,attempts
+india_latency_validation,ap-south-1,deepseek-v4-flash,deepseek-v4-flash,fp_a18b46594c_prod0820_fp8_kvcache_20260402,2026-08-06T23:40:37.214380Z,2026-08-07T00:07:12.252959Z,18
+india_latency_validation,ap-south-1,deepseek-v4-pro,deepseek-v4-pro,fp_9954b31ca7_prod0820_fp8_kvcache_20260402,2026-08-06T23:41:58.830553Z,2026-08-07T00:07:44.737672Z,18
+pilot_excluded,ap-south-1,deepseek-v4-flash,deepseek-v4-flash,fp_a18b46594c_prod0820_fp8_kvcache_20260402,2026-08-06T20:24:40.824932Z,2026-08-06T20:28:07.134485Z,5
+pilot_excluded,ap-south-1,deepseek-v4-pro,deepseek-v4-pro,fp_9954b31ca7_prod0820_fp8_kvcache_20260402,2026-08-06T20:24:44.985950Z,2026-08-06T20:28:05.428895Z,5
+pilot_excluded,us-east-1,deepseek-v4-flash,deepseek-v4-flash,fp_a18b46594c_prod0820_fp8_kvcache_20260402,2026-08-06T20:17:35.484906Z,2026-08-06T20:19:19.854217Z,5
+pilot_excluded,us-east-1,deepseek-v4-pro,deepseek-v4-pro,fp_9954b31ca7_prod0820_fp8_kvcache_20260402,2026-08-06T20:17:02.706737Z,2026-08-06T20:17:52.255332Z,5
+primary_accuracy,us-east-1,deepseek-v4-flash,deepseek-v4-flash,fp_a18b46594c_prod0820_fp8_kvcache_20260402,2026-08-06T20:33:43.166406Z,2026-08-06T23:32:42.168585Z,144
+primary_accuracy,us-east-1,deepseek-v4-pro,deepseek-v4-pro,fp_9954b31ca7_prod0820_fp8_kvcache_20260402,2026-08-06T20:33:38.124766Z,2026-08-06T23:35:48.768118Z,144
