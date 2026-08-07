@@ -1,12 +1,21 @@
+
 # DeepSeek 1M Context Benchmark
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21838863.svg)](https://doi.org/10.5281/zenodo.21838863)
+[![Hugging Face Dataset](https://img.shields.io/badge/dataset-Hugging%20Face-FFD21E)](https://huggingface.co/datasets/chatdeepai/deepseek-1m-context-benchmark)
 
 > **Dataset release v1.0.0. All result files are sanitized, checksum-bound, and generated from the frozen protocol.**
 
 This repository is the public home of the reproducible **DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost**. The study compares `deepseek-v4-flash` and `deepseek-v4-pro` on deterministic English retrieval and synthesis tasks across provider-counted prompt tiers from 32K to approximately 950K tokens.
 
-The canonical article URL is reserved at:
+## Public access and archives
 
-<https://chat-deep.ai/research/deepseek-1m-context-benchmark/>
+- **Research article:** [DeepSeek 1M Context Benchmark](https://chat-deep.ai/research/deepseek-1m-context-benchmark/)
+- **Versioned archive:** [Zenodo record 21838863](https://zenodo.org/records/21838863) â€” DOI [`10.5281/zenodo.21838863`](https://doi.org/10.5281/zenodo.21838863)
+- **Queryable dataset:** [Hugging Face Dataset](https://huggingface.co/datasets/chatdeepai/deepseek-1m-context-benchmark)
+- **Immutable source and evidence:** [GitHub release `v1.0.0`](https://github.com/chatdeepai/deepseek-1m-context-benchmark/releases/tag/v1.0.0)
+
+The GitHub `v1.0.0` tag remains the frozen, checksum-bound source release.
 
 ## Study design
 
@@ -114,7 +123,23 @@ Before provider dispatch, an initial orchestration execution stopped at the obje
 
 ## Citation
 
-Use `CITATION.cff` for the repository citation. Cite the article, dataset version, protocol ID, and release tag together. Do not cite an unsealed development output or any synthetic pipeline-test package as measured evidence.
+Use `CITATION.cff` for the repository citation. For evidence from release `v1.0.0`, cite the version DOI rather than only the repository homepage:
+
+> Chat Deep AI. (2026). *DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21838863
+
+```bibtex
+@dataset{chat_deep_ai_2026_21838863,
+  author    = {{Chat Deep AI}},
+  title     = {DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {1.0.0},
+  doi       = {10.5281/zenodo.21838863},
+  url       = {https://doi.org/10.5281/zenodo.21838863}
+}
+```
+
+The concept DOI [`10.5281/zenodo.21838862`](https://doi.org/10.5281/zenodo.21838862) resolves to the latest Zenodo version. Cite the article, dataset version, protocol ID, and release tag together. Do not cite an unsealed development output or any synthetic pipeline-test package as measured evidence.
 
 ## Licenses
 
@@ -125,3 +150,4 @@ Use `CITATION.cff` for the repository citation. Cite the article, dataset versio
 ## Security and privacy
 
 See `SECURITY.md`. Do not open a public issue containing a credential, private URL, raw provider output, account identifier, or other sensitive material.
+
