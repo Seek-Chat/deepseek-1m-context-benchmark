@@ -21,12 +21,15 @@ function parseArgs(values) {
 
 try {
   const args = parseArgs(process.argv.slice(2));
-  ensure(Object.keys(args).every((key) => ["mode", "root"].includes(key)), "only --mode and --root are accepted");
+  ensure(Object.keys(args).every((key) => ["git_metadata", "mode", "root"].includes(key)), "only --git-metadata, --mode, and --root are accepted");
   const mode = args.mode ?? "skeleton";
   ensure(["skeleton", "ready"].includes(mode), "--mode must be skeleton or ready");
+  const gitMetadata = args.git_metadata ?? "reject";
+  ensure(["allow", "reject"].includes(gitMetadata), "--git-metadata must be allow or reject");
+  ensure(mode === "ready" || gitMetadata === "reject", "--git-metadata allow is valid only in ready mode");
   const root = path.resolve(args.root ?? ".");
-  const report = mode === "skeleton" ? validateSkeleton(root) : validateReadyRepository(root);
-  process.stdout.write(`${JSON.stringify({ status: "PASS", root, ...report, remote_repository_created: false, published: false }, null, 2)}\n`);
+  const report = mode === "skeleton" ? validateSkeleton(root) : validateReadyRepository(root, { allowGitMetadata: gitMetadata === "allow" });
+  process.stdout.write(`${JSON.stringify({ status: "PASS", validation_scope: "repository_content_only", root, ...report }, null, 2)}\n`);
 } catch (error) {
   const expected = error instanceof ReleaseValidationError;
   process.stderr.write(`${JSON.stringify({ status: "FAIL", expected, error: error.message })}\n`);

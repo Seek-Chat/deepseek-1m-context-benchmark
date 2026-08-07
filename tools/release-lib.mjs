@@ -310,7 +310,7 @@ function validateRootDocuments(root, mode) {
   ensure(cc.length > 15000, "LICENSE-DATA.md is unexpectedly short for full CC BY 4.0 legal code");
 
   const cff = fs.readFileSync(path.join(root, "CITATION.cff"), "utf8");
-  for (const token of ["cff-version: 1.2.0", "version: 1.0.0", "date-released: 2026-08-06", "repository-code: \"https://github.com/chatdeepai/deepseek-1m-context-benchmark\"", "license: CC-BY-4.0"]) {
+  for (const token of ["cff-version: 1.2.0", "version: 1.0.0", "date-released: 2026-08-07", "repository-code: \"https://github.com/chatdeepai/deepseek-1m-context-benchmark\"", "license: CC-BY-4.0"]) {
     ensure(cff.includes(token), `CITATION.cff is missing: ${token}`);
   }
 }
@@ -495,10 +495,33 @@ export function validateSkeleton(root) {
   return { mode: "skeleton", files: files.length, privacyFindings: 0, releaseReady: false, licenses: { code: "MIT", data: "CC-BY-4.0-full-legal-code" } };
 }
 
-export function validateReadyRepository(root) {
+function listReadyContentFiles(root) {
+  const files = [];
+  for (const name of fs.readdirSync(root).sort()) {
+    if (name === ".git") continue;
+    const entry = path.join(root, name);
+    const stat = fs.lstatSync(entry);
+    ensure(!stat.isSymbolicLink(), `symbolic links are forbidden: ${entry}`);
+    if (stat.isDirectory()) {
+      for (const relative of listFiles(entry)) files.push(`${name}/${relative}`);
+    } else if (stat.isFile()) files.push(name);
+    else throw new ReleaseValidationError(`unsupported filesystem entry: ${entry}`);
+  }
+  return files;
+}
+
+export function validateReadyRepository(root, { allowGitMetadata = false } = {}) {
   const resolved = path.resolve(root);
   validateRootDocuments(resolved, "ready");
-  ensure(!fs.existsSync(path.join(resolved, ".git")), "ready staging directory must not contain Git history before review");
+  const gitMetadata = path.join(resolved, ".git");
+  const hasGitMetadata = fs.existsSync(gitMetadata);
+  if (hasGitMetadata) {
+    const stat = fs.lstatSync(gitMetadata);
+    ensure(!stat.isSymbolicLink(), ".git metadata must not be a symbolic link");
+    ensure(stat.isDirectory() || stat.isFile(), ".git metadata must be a directory or worktree pointer file");
+    if (stat.isFile()) ensure(/^gitdir: .+\r?\n?$/.test(fs.readFileSync(gitMetadata, "utf8")), ".git worktree pointer is malformed");
+    ensure(allowGitMetadata, "ready staging directory must not contain Git history before review");
+  }
   ensure(!fs.existsSync(path.join(resolved, "release", "NOT-BUILT.md")), "ready repository still contains the skeleton release blocker");
   for (const relative of BENCHMARK_FILES) ensure(fs.existsSync(path.join(resolved, "benchmark", relative)), `curated benchmark file is missing: ${relative}`);
   for (const relative of PUBLICATION_FILES) ensure(fs.existsSync(path.join(resolved, "publication", relative)), `curated publication file is missing: ${relative}`);
@@ -509,10 +532,10 @@ export function validateReadyRepository(root) {
   ensure(!fs.existsSync(path.join(resolved, "benchmark", "tokenizer", "tokenizer.json")) && !fs.existsSync(path.join(resolved, "benchmark", "tokenizer", "tokenizer_config.json")), "uncleared tokenizer file is present");
   ensure(!fs.existsSync(path.join(resolved, "benchmark", "sources")) && !fs.existsSync(path.join(resolved, "benchmark", "evidence")) && !fs.existsSync(path.join(resolved, "aws")), "excluded benchmark or AWS directory is present");
   const release = validateProductionRelease(resolved, { embedded: true });
-  const files = listFiles(resolved);
+  const files = listReadyContentFiles(resolved);
   const findings = scanTree(resolved, files);
   ensure(findings.length === 0, `ready repository privacy scan failed: ${JSON.stringify(findings)}`);
-  return { mode: "ready", files: files.length, releaseFiles: release.files, checksums: release.checksums, terminalRows: release.terminalRows, privacyFindings: 0, releaseReady: true, licenses: { code: "MIT", data: "CC-BY-4.0-full-legal-code" } };
+  return { mode: "ready", files: files.length, releaseFiles: release.files, checksums: release.checksums, terminalRows: release.terminalRows, privacyFindings: 0, releaseReady: true, gitMetadataExcluded: hasGitMetadata, licenses: { code: "MIT", data: "CC-BY-4.0-full-legal-code" } };
 }
 
 export const CURATED = Object.freeze({ benchmarkFiles: BENCHMARK_FILES, publicationFiles: PUBLICATION_FILES, rootDocuments: REQUIRED_ROOT_DOCS });

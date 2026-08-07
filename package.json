@@ -12,7 +12,8 @@
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "validate:skeleton": "node tools/validate-public-repo.mjs --mode skeleton --root .",
-    "validate:ready": "node tools/validate-public-repo.mjs --mode ready --root ."
+    "validate:staging": "node tools/validate-public-repo.mjs --mode ready --root .",
+    "validate:ready": "node tools/validate-public-repo.mjs --mode ready --git-metadata allow --root ."
   },
   "engines": {
     "node": ">=20"

@@ -11,12 +11,19 @@ const ROOT = path.resolve(HERE, "..");
 
 test("repository passes its applicable structure, license, and privacy validation", () => {
   const releaseReady = fs.existsSync(path.join(ROOT, "release", "checksums.sha256"));
-  const report = releaseReady ? validateReadyRepository(ROOT) : validateSkeleton(ROOT);
+  const hasGitMetadata = fs.existsSync(path.join(ROOT, ".git"));
+  const report = releaseReady ? validateReadyRepository(ROOT, { allowGitMetadata: hasGitMetadata }) : validateSkeleton(ROOT);
   assert.equal(report.mode, releaseReady ? "ready" : "skeleton");
   assert.equal(report.releaseReady, releaseReady);
+  if (releaseReady) assert.equal(report.gitMetadataExcluded, hasGitMetadata);
   assert.equal(report.privacyFindings, 0);
   assert.equal(report.licenses.code, "MIT");
   assert.equal(report.licenses.data, "CC-BY-4.0-full-legal-code");
+});
+
+test("pre-Git ready validation still rejects initialized Git metadata", { skip: !fs.existsSync(path.join(ROOT, "release", "checksums.sha256")) || !fs.existsSync(path.join(ROOT, ".git")) }, () => {
+  assert.throws(() => validateReadyRepository(ROOT), /must not contain Git history before review/);
+  assert.equal(validateReadyRepository(ROOT, { allowGitMetadata: true }).gitMetadataExcluded, true);
 });
 
 test("privacy scanner detects representative private material", () => {

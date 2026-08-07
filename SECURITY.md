@@ -2,9 +2,9 @@
 
 ## Reporting sensitive findings
 
-After the public repository exists, use GitHub's private vulnerability-reporting channel for this repository. Do not open a public issue containing credentials, authorization material, session cookies, private URLs, cloud identifiers, account information, raw benchmark prompts, or raw provider responses.
+Use GitHub's private vulnerability-reporting channel for this repository when it is enabled. Do not open a public issue containing credentials, authorization material, session cookies, private URLs, cloud identifiers, account information, raw benchmark prompts, or raw provider responses.
 
-Until a private reporting channel is enabled, report the existence of a concern through the site's public contact route without including the sensitive value itself. The maintainer can then establish a private channel.
+If private vulnerability reporting is not enabled, report only the existence of a concern through the site's public contact route without including the sensitive value itself. The maintainer can then establish a private channel.
 
 ## Supported release
 

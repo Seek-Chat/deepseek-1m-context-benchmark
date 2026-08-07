@@ -2,9 +2,9 @@
 
 > **Dataset release v1.0.0. All result files are sanitized, checksum-bound, and generated from the frozen protocol.**
 
-This repository is the planned public home for the reproducible **DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost**. The study compares `deepseek-v4-flash` and `deepseek-v4-pro` on deterministic English retrieval and synthesis tasks across provider-counted prompt tiers from 32K to approximately 950K tokens.
+This repository is the public home of the reproducible **DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost**. The study compares `deepseek-v4-flash` and `deepseek-v4-pro` on deterministic English retrieval and synthesis tasks across provider-counted prompt tiers from 32K to approximately 950K tokens.
 
-The canonical article will be published at:
+The canonical article URL is reserved at:
 
 <https://chat-deep.ai/research/deepseek-1m-context-benchmark/>
 
@@ -38,9 +38,9 @@ The India label identifies an AWS client network vantage point. It does not repr
 
 `benchmark/protocol.json` is the scientific source of truth. Any change to prompts, fixtures, model IDs, task families, context tiers, target positions, repeats, request controls, grading, exclusions, or attempts requires a new protocol boundary.
 
-## What the final release contains
+## What release v1.0.0 contains
 
-After the final validator and public-safety gates pass, release `v1.0.0` will contain:
+Release `v1.0.0` contains:
 
 - 344 sanitized terminal rows in CSV and JSONL;
 - a 288-row primary accuracy cohort;
@@ -114,7 +114,7 @@ Before provider dispatch, an initial orchestration execution stopped at the obje
 
 ## Citation
 
-Use `CITATION.cff` for the repository citation. Cite the article, dataset version, protocol ID, and release tag together. Do not cite this local skeleton or any synthetic pipeline-test package as measured evidence.
+Use `CITATION.cff` for the repository citation. Cite the article, dataset version, protocol ID, and release tag together. Do not cite an unsealed development output or any synthetic pipeline-test package as measured evidence.
 
 ## Licenses
 

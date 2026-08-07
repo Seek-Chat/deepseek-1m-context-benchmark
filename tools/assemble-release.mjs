@@ -62,7 +62,7 @@ function copySkeleton(output) {
   const changelogPath = path.join(output, "CHANGELOG.md");
   const changelog = fs.readFileSync(changelogPath, "utf8");
   const planned = "Planned first public release under tag `v1.0.0`.";
-  const assembled = "First public-data release candidate for immutable tag `v1.0.0`.";
+  const assembled = "First public dataset and code release under immutable tag `v1.0.0`.";
   const blocker = "\nThis entry is not evidence that the release has been published. The local skeleton remains blocked until assembly and ready-mode validation pass.\n";
   ensure(changelog.includes(planned) && changelog.includes(blocker), "skeleton changelog markers are missing");
   fs.writeFileSync(changelogPath, changelog.replace(planned, assembled).replace(blocker, "\n"), "utf8");

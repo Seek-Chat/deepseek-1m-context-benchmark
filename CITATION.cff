@@ -6,7 +6,7 @@ authors:
   - name: "Chat Deep AI"
     website: "https://chat-deep.ai/"
 version: 1.0.0
-date-released: 2026-08-06
+date-released: 2026-08-07
 repository-code: "https://github.com/chatdeepai/deepseek-1m-context-benchmark"
 url: "https://chat-deep.ai/research/deepseek-1m-context-benchmark/"
 license: CC-BY-4.0
