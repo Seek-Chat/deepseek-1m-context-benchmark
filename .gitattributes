@@ -3,14 +3,14 @@
 
 # These files are part of the sealed release or frozen hash contract. Preserve
 # their exact bytes, including their original line endings.
-/release/** -text
-/charts/** -text
-/tables/** -text
-/gutenberg-draft.template.html -text
-/template-bindings.required.json -text
-/wordpress-metadata.json -text
-/benchmark/protocol.json -text
-/benchmark/calibration.json -text
+/release/** -text whitespace=cr-at-eol
+/charts/** -text whitespace=cr-at-eol
+/tables/** -text whitespace=cr-at-eol
+/gutenberg-draft.template.html -text whitespace=cr-at-eol
+/template-bindings.required.json -text whitespace=cr-at-eol
+/wordpress-metadata.json -text whitespace=cr-at-eol
+/benchmark/protocol.json -text whitespace=cr-at-eol
+/benchmark/calibration.json -text whitespace=cr-at-eol
 
 # Generated chart images are binary and must never receive line conversion.
 *.png binary
