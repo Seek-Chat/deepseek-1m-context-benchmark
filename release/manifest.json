@@ -2,7 +2,7 @@
   "manifest_schema_version": "1.0.0",
   "release_version": "1.0.0",
   "protocol_id": "deepseek-v4-long-context-retrieval-v1.1.0",
-  "canonical_article_url": "https://chat-deep.ai/research/deepseek-1m-context-benchmark/",
+  "canonical_article_url": "https://seek-chat.com/research/deepseek-1m-context-benchmark/",
   "status": "dataset_release_passed_article_requires_media_binding",
   "generated_at_utc": "2026-08-07T01:44:08.222Z",
   "source_hashes": {
@@ -201,8 +201,8 @@
     },
     {
       "path": "gutenberg-draft.template.html",
-      "bytes": 32265,
-      "sha256": "263d9860c674913b29f8c196ff79774253361a5d6cfcdcec2e9386aa634ddbe5"
+      "bytes": 32278,
+      "sha256": "bbec470c0146c1aa45a3115e94898cd073dde5467ec5d90f68660a6f85f055c6"
     },
     {
       "path": "release/all-attempts.csv",
@@ -361,8 +361,10 @@
     },
     {
       "path": "wordpress-metadata.json",
-      "bytes": 1999,
-      "sha256": "6c0c4c6c05a1e481a6de82044ecf55ec0e89be000495745fd918005dab969a6f"
+      "bytes": 2000,
+      "sha256": "e709fae9629cfb6586a7d45942e41423c9ad2e6a0c10ba41e88d169c91f98d06"
     }
-  ]
+  ],
+  "metadata_updated_on": "2026-09-07",
+  "metadata_update_note": "Publisher branding and links updated to Seek-Chat; measurement data and frozen v1.0.0 tag unchanged."
 }
