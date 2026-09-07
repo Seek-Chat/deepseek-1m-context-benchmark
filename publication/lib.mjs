@@ -10,8 +10,8 @@ const BENCHMARK_ROOT = path.resolve(HERE, "..");
 export const DEFAULTS = Object.freeze({
   protocol: path.join(BENCHMARK_ROOT, "benchmark", "protocol.json"),
   calibration: path.join(BENCHMARK_ROOT, "benchmark", "calibration.json"),
-  canonicalUrl: "https://chat-deep.ai/research/deepseek-1m-context-benchmark/",
-  researchHubUrl: "https://chat-deep.ai/research/",
+  canonicalUrl: "https://seek-chat.com/research/deepseek-1m-context-benchmark/",
+  researchHubUrl: "https://seek-chat.com/research/",
 });
 
 const EXPECTED_PROTOCOL_ID = "deepseek-v4-long-context-retrieval-v1.1.0";
@@ -1267,7 +1267,7 @@ function generateArticle(summary, protocol, releaseVersion) {
     imageBlock("CH00", "Benchmark design chart showing the three analysis roles and their separate denominators.", `Protocol ${protocol.protocol_id}; release ${releaseVersion}; 344 terminal rows split into 20 excluded pilot, 288 primary, and 36 India validation rows.`),
     heading(2, "What DeepSeek officially documents"),
     paragraph(`DeepSeek's <a href="https://api-docs.deepseek.com/quick_start/pricing/">official Models &amp; Pricing documentation</a> was the frozen source for the tested model IDs, the documented 1M context capacity, the documented 384K maximum output, and dated rates. A context capacity is an input-and-output budget, not proof that a model will retrieve or synthesize every requested detail at every position. This study targeted four returned prompt-token bands: 24K–36K, 110K–140K, 450K–550K, and 850K–980K. The final tier is described as approximately 950K, not one million input tokens. Independently of the model's documented 384K maximum, the study's request contract capped each generated answer at ${protocol.request.max_tokens} tokens; it did not test long-form maximum output.`),
-    paragraph(`The current specification and planning details belong in the <a href="https://chat-deep.ai/docs/deepseek-v4-context-output-limits/">DeepSeek V4 context and output limits guide</a>. This page owns the independent measured benchmark.`),
+    paragraph(`The current specification and planning details belong in the <a href="https://seek-chat.com/docs/deepseek-v4-context-output-limits/">DeepSeek V4 context and output limits guide</a>. This page owns the independent measured benchmark.`),
     heading(2, "Original test methodology"),
     paragraph("The corpus generator created deterministic synthetic records with objective answers and no external-knowledge requirement. Flash and Pro received the same unsalted base fixture for each matched primary condition. A deterministic role-and-region prefix separated pilot, primary, U.S., and India request prefixes while keeping the two models paired within a role and vantage."),
     heading(3, "Operational preflight disclosure"),
@@ -1301,7 +1301,7 @@ function generateArticle(summary, protocol, releaseVersion) {
     imageBlock("CH06", "Grouped latency chart showing first-answer and end-to-end p50 and p95 stream time by model and prompt tier.", `Release ${releaseVersion}; ${runDate}; timings are from the disclosed us-east-1 client network vantage and show n for every group.`),
     imageBlock("CH07", "Bar chart of dated provider cost upper bounds by analysis role.", `Release ${releaseVersion}; prices frozen ${protocol.cost_controls.pricing_snapshot_date}; all ${summary.counts.planned_calls} terminal rows included.`),
     paragraph(`The U.S. primary end-to-end latency was ${prettyMs(primary.latency.end_to_end.p50_ms)} at p50 and ${prettyMs(primary.latency.end_to_end.p95_ms)} at p95 across n=${primary.latency.end_to_end.n} transport-complete streams. ${costCoverageSentence(summary.overall_terminal_records, "The all-role known-usage cost estimate")} These figures use the dated ${protocol.cost_controls.pricing_snapshot_date} price snapshot and are not a current price quote.`),
-    paragraph(`For current implementation guidance, see the <a href="https://chat-deep.ai/docs/api/">DeepSeek API guide</a>, <a href="https://chat-deep.ai/docs/deepseek-context-caching/">context-caching guide</a>, and <a href="https://chat-deep.ai/pricing/">current pricing page</a>.`),
+    paragraph(`For current implementation guidance, see the <a href="https://seek-chat.com/docs/api/">DeepSeek API guide</a>, <a href="https://seek-chat.com/docs/deepseek-context-caching/">context-caching guide</a>, and <a href="https://seek-chat.com/pricing/">current pricing page</a>.`),
     heading(2, "Failure and exclusion accounting"),
     imageBlock("CH08", "Funnel chart reconciling 344 planned calls and the separate 288-case primary grading stages.", `Release ${releaseVersion}; 20 pilot rows and 36 India rows are excluded from the primary accuracy denominator.`),
     paragraph("All terminal states stay visible. The public failure file distinguishes transport, prompt-tier calibration, JSON parsing, exact-key, and strict-value stages. There was no automatic retry and no failed row was silently removed from its assigned denominator."),
@@ -1309,7 +1309,7 @@ function generateArticle(summary, protocol, releaseVersion) {
     imageBlock("CH09", "Chart comparing returned prompt-token distributions with the four frozen accepted tiers.", `Release ${releaseVersion}; ${runDate}; primary cases only; target and accepted intervals come from protocol v1.1.0.`),
     heading(2, "Matched India network-vantage validation"),
     imageBlock("CH10", "Bar chart of paired India-minus-US end-to-end latency deltas by model and edge prompt tier.", `Release ${releaseVersion}; ${runDate}; ${summary.india_latency_validation.matched_pairs} matched single-record pairs; network-vantage interpretation only.`),
-    paragraph(`The India slice contains ${summary.india_latency_validation.matched_pairs} matched single-record pairs at 32K and approximately 950K. Across available paired end-to-end timings, the India-minus-U.S. delta had p50 ${prettyMs(summary.india_latency_validation.end_to_end_delta_ms.p50_ms)} and p95 ${prettyMs(summary.india_latency_validation.end_to_end_delta_ms.p95_ms)} with n=${summary.india_latency_validation.end_to_end_delta_ms.n}. This labels AWS client network vantages, not Indian users, model-hosting location, or recurring reliability. Ongoing availability belongs in the <a href="https://chat-deep.ai/research/deepseek-reliability-report/">regional DeepSeek reliability report</a>.`),
+    paragraph(`The India slice contains ${summary.india_latency_validation.matched_pairs} matched single-record pairs at 32K and approximately 950K. Across available paired end-to-end timings, the India-minus-U.S. delta had p50 ${prettyMs(summary.india_latency_validation.end_to_end_delta_ms.p50_ms)} and p95 ${prettyMs(summary.india_latency_validation.end_to_end_delta_ms.p95_ms)} with n=${summary.india_latency_validation.end_to_end_delta_ms.n}. This labels AWS client network vantages, not Indian users, model-hosting location, or recurring reliability. Ongoing availability belongs in the <a href="https://seek-chat.com/research/deepseek-reliability-report/">regional DeepSeek reliability report</a>.`),
     heading(2, "Reproducibility and downloads"),
     listBlock([
       '<a href="{{PRIMARY_CASES_URL}}">Primary 288-case CSV</a>',
@@ -1321,7 +1321,7 @@ function generateArticle(summary, protocol, releaseVersion) {
     paragraph("The public rows are reconstructed through an explicit allowlist. They exclude credentials, authorization headers, raw prompts, raw response bodies, private S3 object keys, local paths, and account data. The validator export contains aggregate field counts rather than per-field expected and observed values, so the release does not fabricate a field-level dataset."),
     heading(2, "Limitations"),
     listBlock(summary.interpretation_boundaries.map(esc)),
-    paragraph(`This work belongs to the <a href="${DEFAULTS.researchHubUrl}">DeepSeek research hub</a> and supports the site's <a href="https://chat-deep.ai/">independent DeepSeek AI guide</a>. For model internals rather than measurements, use the <a href="https://chat-deep.ai/docs/deepseek-v4-architecture/">DeepSeek V4 architecture explainer</a>.`),
+    paragraph(`This work belongs to the <a href="${DEFAULTS.researchHubUrl}">DeepSeek research hub</a> and supports the site's <a href="https://seek-chat.com/">independent DeepSeek AI guide</a>. For model internals rather than measurements, use the <a href="https://seek-chat.com/docs/deepseek-v4-architecture/">DeepSeek V4 architecture explainer</a>.`),
     heading(2, "Sources and related research"),
     listBlock([
       '<a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek Models &amp; Pricing</a> — current model specifications and the dated price source.',
@@ -1384,19 +1384,19 @@ function generateArticle(summary, protocol, releaseVersion) {
       {
         "@type": "Person",
         "@id": "{{AUTHOR_ID}}",
-        name: "Chat Deep AI",
+        name: "Seek-Chat",
         url: "{{AUTHOR_ID}}",
       },
       {
         "@type": "Organization",
         "@id": "{{PUBLISHER_ID}}",
-        name: "Chat-Deep.ai",
-        url: "https://chat-deep.ai/",
+        name: "Seek-Chat",
+        url: "https://seek-chat.com/",
         logo: {
           "@type": "ImageObject",
-          "@id": "https://chat-deep.ai/#logo",
-          url: "https://chat-deep.ai/wp-content/uploads/2026/01/deep-ai-logo.png",
-          contentUrl: "https://chat-deep.ai/wp-content/uploads/2026/01/deep-ai-logo.png",
+          "@id": "https://seek-chat.com/#logo",
+          url: "https://seek-chat.com/wp-content/uploads/2026/01/deep-ai-logo.png",
+          contentUrl: "https://seek-chat.com/wp-content/uploads/2026/01/deep-ai-logo.png",
           width: 765,
           height: 267,
         },
@@ -2405,11 +2405,11 @@ function canonicalBindingUrl(key, raw) {
   ensure(url.username === "" && url.password === "", `${key} must not contain URL credentials`);
   ensure(url.search === "", `${key} must not contain a query string or signed token`);
   const host = url.hostname.toLowerCase();
-  const siteHost = host === "chat-deep.ai" || host === "www.chat-deep.ai";
+  const siteHost = host === "seek-chat.com" || host === "www.seek-chat.com";
   if (/^CH\d{2}_URL$/.test(key)) {
-    ensure(siteHost && /^\/wp-content\/uploads\/.+\.png$/i.test(url.pathname) && url.hash === "", `${key} must be an unfragmented WordPress PNG media URL on chat-deep.ai`);
+    ensure(siteHost && /^\/wp-content\/uploads\/.+\.png$/i.test(url.pathname) && url.hash === "", `${key} must be an unfragmented WordPress PNG media URL on seek-chat.com`);
   } else if (key === "FEATURED_IMAGE_URL") {
-    ensure(siteHost && /^\/wp-content\/uploads\/.+\.(?:png|webp|jpe?g|avif)$/i.test(url.pathname) && url.hash === "", `${key} must be an unfragmented WordPress image URL on chat-deep.ai`);
+    ensure(siteHost && /^\/wp-content\/uploads\/.+\.(?:png|webp|jpe?g|avif)$/i.test(url.pathname) && url.hash === "", `${key} must be an unfragmented WordPress image URL on seek-chat.com`);
   } else if (key === "REPOSITORY_URL") {
     ensure(host === "github.com" && /^\/[^/]+\/[^/]+\/?$/.test(url.pathname) && url.hash === "", `${key} must be a GitHub repository root URL`);
   } else if (key === "RELEASE_URL") {
@@ -2423,9 +2423,9 @@ function canonicalBindingUrl(key, raw) {
     }[key];
     ensure(host === "raw.githubusercontent.com" && url.pathname.split("/").filter(Boolean).length >= 4 && url.pathname.endsWith(`/${requiredBasename}`) && url.hash === "", `${key} must be a raw.githubusercontent.com URL ending in ${requiredBasename}`);
   } else if (key === "AUTHOR_ID") {
-    ensure(host === "chat-deep.ai" && url.pathname === "/author/caht-deep/" && url.hash === "", `${key} must be the live chat-deep.ai Person entity URL`);
+    ensure(host === "seek-chat.com" && url.pathname === "/author/caht-deep/" && url.hash === "", `${key} must be the live seek-chat.com Person entity URL`);
   } else if (key === "PUBLISHER_ID") {
-    ensure(host === "chat-deep.ai" && url.pathname === "/" && url.hash === "#organization", `${key} must be the chat-deep.ai #organization entity URL`);
+    ensure(host === "seek-chat.com" && url.pathname === "/" && url.hash === "#organization", `${key} must be the seek-chat.com #organization entity URL`);
   } else {
     throw new PublicationError(`no URL policy is defined for ${key}`);
   }

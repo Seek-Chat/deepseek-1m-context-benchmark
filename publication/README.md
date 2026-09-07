@@ -53,28 +53,28 @@ The Gutenberg template deliberately contains media and download placeholders. Up
 
 ```json
 {
-  "CH00_URL": "https://chat-deep.ai/wp-content/uploads/.../design.png",
-  "CH01_URL": "https://chat-deep.ai/wp-content/uploads/.../tier.png",
-  "CH02_URL": "https://chat-deep.ai/wp-content/uploads/.../family.png",
-  "CH03_URL": "https://chat-deep.ai/wp-content/uploads/.../position.png",
-  "CH04_URL": "https://chat-deep.ai/wp-content/uploads/.../pairs.png",
-  "CH05_URL": "https://chat-deep.ai/wp-content/uploads/.../diagnostics.png",
-  "CH06_URL": "https://chat-deep.ai/wp-content/uploads/.../latency.png",
-  "CH07_URL": "https://chat-deep.ai/wp-content/uploads/.../cost.png",
-  "CH08_URL": "https://chat-deep.ai/wp-content/uploads/.../funnel.png",
-  "CH09_URL": "https://chat-deep.ai/wp-content/uploads/.../tokens.png",
-  "CH10_URL": "https://chat-deep.ai/wp-content/uploads/.../india.png",
-  "REPOSITORY_URL": "https://github.com/chatdeepai/deepseek-1m-context-benchmark",
-  "RELEASE_URL": "https://github.com/chatdeepai/deepseek-1m-context-benchmark/releases/tag/v1.0.0",
+  "CH00_URL": "https://seek-chat.com/wp-content/uploads/.../design.png",
+  "CH01_URL": "https://seek-chat.com/wp-content/uploads/.../tier.png",
+  "CH02_URL": "https://seek-chat.com/wp-content/uploads/.../family.png",
+  "CH03_URL": "https://seek-chat.com/wp-content/uploads/.../position.png",
+  "CH04_URL": "https://seek-chat.com/wp-content/uploads/.../pairs.png",
+  "CH05_URL": "https://seek-chat.com/wp-content/uploads/.../diagnostics.png",
+  "CH06_URL": "https://seek-chat.com/wp-content/uploads/.../latency.png",
+  "CH07_URL": "https://seek-chat.com/wp-content/uploads/.../cost.png",
+  "CH08_URL": "https://seek-chat.com/wp-content/uploads/.../funnel.png",
+  "CH09_URL": "https://seek-chat.com/wp-content/uploads/.../tokens.png",
+  "CH10_URL": "https://seek-chat.com/wp-content/uploads/.../india.png",
+  "REPOSITORY_URL": "https://github.com/Seek-Chat/deepseek-1m-context-benchmark",
+  "RELEASE_URL": "https://github.com/Seek-Chat/deepseek-1m-context-benchmark/releases/tag/v1.0.0",
   "ALL_ATTEMPTS_URL": "https://raw.githubusercontent.com/.../all-attempts.csv",
   "PRIMARY_CASES_URL": "https://raw.githubusercontent.com/.../primary-cases.csv",
   "INDIA_CASES_URL": "https://raw.githubusercontent.com/.../india-latency-cases.csv",
   "SUMMARY_URL": "https://raw.githubusercontent.com/.../summary.json",
   "DATE_PUBLISHED": "2026-08-06",
   "DATE_MODIFIED": "2026-08-06",
-  "FEATURED_IMAGE_URL": "https://chat-deep.ai/wp-content/uploads/.../featured.webp",
-  "AUTHOR_ID": "https://chat-deep.ai/author/caht-deep/",
-  "PUBLISHER_ID": "https://chat-deep.ai/#organization"
+  "FEATURED_IMAGE_URL": "https://seek-chat.com/wp-content/uploads/.../featured.webp",
+  "AUTHOR_ID": "https://seek-chat.com/author/caht-deep/",
+  "PUBLISHER_ID": "https://seek-chat.com/#organization"
 }
 ```
 
