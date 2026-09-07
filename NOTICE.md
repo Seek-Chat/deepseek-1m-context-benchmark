@@ -1,6 +1,6 @@
 # Notices and third-party material
 
-This is an independent benchmark published by Chat Deep AI. It is not affiliated with, endorsed by, or sponsored by DeepSeek or Amazon Web Services.
+This is an independent benchmark published by Seek-Chat. It is not affiliated with, endorsed by, or sponsored by DeepSeek or Amazon Web Services.
 
 DeepSeek, its model names, and related marks belong to their respective owners. Amazon Web Services and AWS marks belong to Amazon.com, Inc. or its affiliates. No trademark rights are granted by the repository licenses.
 

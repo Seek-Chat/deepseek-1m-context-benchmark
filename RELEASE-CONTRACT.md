@@ -74,12 +74,12 @@ If any gate fails, the assembler removes the incomplete output directory. It nev
 After a separately authorized public GitHub release, the WordPress binder must use these immutable URLs:
 
 ```text
-REPOSITORY_URL=https://github.com/chatdeepai/deepseek-1m-context-benchmark
-RELEASE_URL=https://github.com/chatdeepai/deepseek-1m-context-benchmark/releases/tag/v1.0.0
-ALL_ATTEMPTS_URL=https://raw.githubusercontent.com/chatdeepai/deepseek-1m-context-benchmark/v1.0.0/release/all-attempts.csv
-PRIMARY_CASES_URL=https://raw.githubusercontent.com/chatdeepai/deepseek-1m-context-benchmark/v1.0.0/release/primary-cases.csv
-INDIA_CASES_URL=https://raw.githubusercontent.com/chatdeepai/deepseek-1m-context-benchmark/v1.0.0/release/india-latency-cases.csv
-SUMMARY_URL=https://raw.githubusercontent.com/chatdeepai/deepseek-1m-context-benchmark/v1.0.0/release/summary.json
+REPOSITORY_URL=https://github.com/Seek-Chat/deepseek-1m-context-benchmark
+RELEASE_URL=https://github.com/Seek-Chat/deepseek-1m-context-benchmark/releases/tag/v1.0.0
+ALL_ATTEMPTS_URL=https://raw.githubusercontent.com/Seek-Chat/deepseek-1m-context-benchmark/v1.0.0/release/all-attempts.csv
+PRIMARY_CASES_URL=https://raw.githubusercontent.com/Seek-Chat/deepseek-1m-context-benchmark/v1.0.0/release/primary-cases.csv
+INDIA_CASES_URL=https://raw.githubusercontent.com/Seek-Chat/deepseek-1m-context-benchmark/v1.0.0/release/india-latency-cases.csv
+SUMMARY_URL=https://raw.githubusercontent.com/Seek-Chat/deepseek-1m-context-benchmark/v1.0.0/release/summary.json
 ```
 
 No binder URL may point to `main`, contain a query string, or depend on a signed or expiring URL.
