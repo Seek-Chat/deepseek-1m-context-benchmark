@@ -1,10 +1,10 @@
 # Dataset and chart license
 
-The sanitized benchmark dataset and original charts identified in the release manifest are licensed by Chat Deep AI under the Creative Commons Attribution 4.0 International Public License.
+The sanitized benchmark dataset and original charts identified in the release manifest are licensed by Seek-Chat under the Creative Commons Attribution 4.0 International Public License.
 
 Suggested attribution:
 
-> Chat Deep AI, “DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost,” dataset version 1.0.0, protocol `deepseek-v4-long-context-retrieval-v1.1.0`, 2026, https://chat-deep.ai/research/deepseek-1m-context-benchmark/.
+> Seek-Chat, “DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost,” dataset version 1.0.0, protocol `deepseek-v4-long-context-retrieval-v1.1.0`, 2026, https://seek-chat.com/research/deepseek-1m-context-benchmark/.
 
 This license does not apply to third-party trademarks, provider documentation, model artifacts, tokenizer files, or any material specifically identified as third-party content.
 

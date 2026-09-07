@@ -10,10 +10,10 @@ This repository is the public home of the reproducible **DeepSeek 1M Context Ben
 
 ## Public access and archives
 
-- **Research article:** [DeepSeek 1M Context Benchmark](https://chat-deep.ai/research/deepseek-1m-context-benchmark/)
-- **Versioned archive:** [Zenodo record 21838863](https://zenodo.org/records/21838863) â€” DOI [`10.5281/zenodo.21838863`](https://doi.org/10.5281/zenodo.21838863)
+- **Research article:** [DeepSeek 1M Context Benchmark](https://seek-chat.com/research/deepseek-1m-context-benchmark/)
+- **Versioned archive:** [Zenodo record 21838863](https://zenodo.org/records/21838863) — DOI [`10.5281/zenodo.21838863`](https://doi.org/10.5281/zenodo.21838863)
 - **Queryable dataset:** [Hugging Face Dataset](https://huggingface.co/datasets/chatdeepai/deepseek-1m-context-benchmark)
-- **Immutable source and evidence:** [GitHub release `v1.0.0`](https://github.com/chatdeepai/deepseek-1m-context-benchmark/releases/tag/v1.0.0)
+- **Immutable source and evidence:** [GitHub release `v1.0.0`](https://github.com/Seek-Chat/deepseek-1m-context-benchmark/releases/tag/v1.0.0)
 
 The GitHub `v1.0.0` tag remains the frozen, checksum-bound source release.
 
@@ -125,11 +125,11 @@ Before provider dispatch, an initial orchestration execution stopped at the obje
 
 Use `CITATION.cff` for the repository citation. For evidence from release `v1.0.0`, cite the version DOI rather than only the repository homepage:
 
-> Chat Deep AI. (2026). *DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21838863
+> Seek-Chat. (2026). *DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21838863
 
 ```bibtex
-@dataset{chat_deep_ai_2026_21838863,
-  author    = {{Chat Deep AI}},
+@dataset{seek_chat_2026_21838863,
+  author    = {{Seek-Chat}},
   title     = {DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost},
   year      = {2026},
   publisher = {Zenodo},

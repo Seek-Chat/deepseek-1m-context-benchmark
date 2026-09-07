@@ -3,7 +3,7 @@
   "post_type": "page",
   "title": "DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost",
   "slug": "deepseek-1m-context-benchmark",
-  "canonical": "https://chat-deep.ai/research/deepseek-1m-context-benchmark/",
+  "canonical": "https://seek-chat.com/research/deepseek-1m-context-benchmark/",
   "parent": "DeepSeek Research Papers, Reports & Reading Guide",
   "seo_title": "DeepSeek 1M Context Benchmark: Flash vs Pro (2026)",
   "meta_description": "See a reproducible DeepSeek V4 benchmark across 32K–950K prompts, testing retrieval accuracy, multi-hop joins, latency, token use, and real API cost.",

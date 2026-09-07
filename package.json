@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "license": "MIT",
-  "homepage": "https://chat-deep.ai/research/deepseek-1m-context-benchmark/",
+  "homepage": "https://seek-chat.com/research/deepseek-1m-context-benchmark/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chatdeepai/deepseek-1m-context-benchmark.git"
+    "url": "https://github.com/Seek-Chat/deepseek-1m-context-benchmark.git"
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",

@@ -4,36 +4,13 @@ message: "If you use this benchmark, cite the article, dataset release, and froz
 title: "DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost"
 type: dataset
 authors:
-  - name: "Chat Deep AI"
-    website: "https://chat-deep.ai/"
+  - name: "Seek-Chat"
+    website: "https://seek-chat.com/"
 version: 1.0.0
 date-released: 2026-08-07
 doi: 10.5281/zenodo.21838863
-repository-code: "https://github.com/chatdeepai/deepseek-1m-context-benchmark"
-url: "https://chat-deep.ai/research/deepseek-1m-context-benchmark/"
-license: CC-BY-4.0
-keywords:
-  - DeepSeek
-  - long context
-  - retrieval benchmark
-  - latency
-  - reproducibility
-abstract: >-
-  A reproducible benchmark of DeepSeek V4 Flash and Pro across deterministic
-  long-context retrieval and synthesis tasks, with sanitized attempt-level
-  data, original charts, strict grading, and a frozen methodology.
-
-cff-version: 1.2.0
-message: "If you use this benchmark, cite the article, dataset release, and frozen protocol."
-title: "DeepSeek 1M Context Benchmark: Retrieval Accuracy, Latency, and Cost"
-type: dataset
-authors:
-  - name: "Chat Deep AI"
-    website: "https://chat-deep.ai/"
-version: 1.0.0
-date-released: 2026-08-07
-repository-code: "https://github.com/chatdeepai/deepseek-1m-context-benchmark"
-url: "https://chat-deep.ai/research/deepseek-1m-context-benchmark/"
+repository-code: "https://github.com/Seek-Chat/deepseek-1m-context-benchmark"
+url: "https://seek-chat.com/research/deepseek-1m-context-benchmark/"
 license: CC-BY-4.0
 keywords:
   - DeepSeek

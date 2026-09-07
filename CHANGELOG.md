@@ -2,6 +2,14 @@
 
 All notable public dataset and code releases are documented here.
 
+## Branding and link maintenance — 2026-09-07
+
+- Updated the publisher name to Seek-Chat and the website to seek-chat.com.
+- Updated GitHub account references and current citation metadata.
+- Removed a duplicated citation document from CITATION.cff.
+- Refreshed current publication metadata checksums after the URL changes.
+- Benchmark measurements, protocol, charts, and the immutable v1.0.0 tag are unchanged. The original Zenodo ZIP and upstream provenance retain their historical metadata.
+
 ## 1.0.0 — 2026-08-07
 
 First public dataset and code release under immutable tag `v1.0.0`.
