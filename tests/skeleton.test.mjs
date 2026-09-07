@@ -32,7 +32,7 @@ test("privacy scanner detects representative private material", () => {
     ["account", `${"arn:"}${"aws:"}lambda:us-east-1:${"123456"}${"789012"}:function:private`],
     ["path", `${"C:"}${"\\Users\\"}private\\evidence.json`],
     ["email", `${"private"}${"@"}example.com`],
-    ["admin", `https://chat-deep.ai/${"wp-admin/"}post.php`],
+    ["admin", `https://seek-chat.com/${"wp-admin/"}post.php`],
     ["resource", `${"chatdeep-context-"}${"benchmark-us-rawbucket-private"}`],
     ["secret-name", `${"chatdeep/"}${"deepseek-1m-context-benchmark/api-key"}`],
   ];
@@ -42,8 +42,8 @@ test("privacy scanner detects representative private material", () => {
 test("privacy scanner permits hashes and immutable public release URLs", () => {
   const safe = [
     "39c68bfc607157011012dc47d59524dcf3d5d7155071e6862c5038410d642c16",
-    "https://raw.githubusercontent.com/chatdeepai/deepseek-1m-context-benchmark/v1.0.0/release/summary.json",
-    "https://github.com/chatdeepai/deepseek-1m-context-benchmark/releases/tag/v1.0.0",
+    "https://raw.githubusercontent.com/Seek-Chat/deepseek-1m-context-benchmark/v1.0.0/release/summary.json",
+    "https://github.com/Seek-Chat/deepseek-1m-context-benchmark/releases/tag/v1.0.0",
     `${"pilot-us-"}${"20260806-001-retry1"}`,
   ].join("\n");
   assert.deepEqual(scanText(safe, "safe"), []);
