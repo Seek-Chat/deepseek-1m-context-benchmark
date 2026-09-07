@@ -236,12 +236,12 @@ function validBindingMap(required) {
   const map = {};
   for (const key of required) {
     if (key.startsWith("DATE_")) map[key] = "2026-08-06";
-    else if (/^CH\d{2}_URL$/.test(key)) map[key] = `https://chat-deep.ai/wp-content/uploads/2026/08/${key.toLowerCase()}.png`;
-    else if (key === "FEATURED_IMAGE_URL") map[key] = "https://chat-deep.ai/wp-content/uploads/2026/08/deepseek-1m-featured.webp";
-    else if (key === "REPOSITORY_URL") map[key] = "https://github.com/chatdeepai/deepseek-1m-context-benchmark";
-    else if (key === "RELEASE_URL") map[key] = "https://github.com/chatdeepai/deepseek-1m-context-benchmark/releases/tag/v1.0.0";
-    else if (key === "AUTHOR_ID") map[key] = "https://chat-deep.ai/author/caht-deep/";
-    else if (key === "PUBLISHER_ID") map[key] = "https://chat-deep.ai/#organization";
+    else if (/^CH\d{2}_URL$/.test(key)) map[key] = `https://seek-chat.com/wp-content/uploads/2026/08/${key.toLowerCase()}.png`;
+    else if (key === "FEATURED_IMAGE_URL") map[key] = "https://seek-chat.com/wp-content/uploads/2026/08/deepseek-1m-featured.webp";
+    else if (key === "REPOSITORY_URL") map[key] = "https://github.com/Seek-Chat/deepseek-1m-context-benchmark";
+    else if (key === "RELEASE_URL") map[key] = "https://github.com/Seek-Chat/deepseek-1m-context-benchmark/releases/tag/v1.0.0";
+    else if (key === "AUTHOR_ID") map[key] = "https://seek-chat.com/author/caht-deep/";
+    else if (key === "PUBLISHER_ID") map[key] = "https://seek-chat.com/#organization";
     else {
       const basename = {
         ALL_ATTEMPTS_URL: "all-attempts.csv",
@@ -249,7 +249,7 @@ function validBindingMap(required) {
         INDIA_CASES_URL: "india-latency-cases.csv",
         SUMMARY_URL: "summary.json",
       }[key];
-      map[key] = `https://raw.githubusercontent.com/chatdeepai/deepseek-1m-context-benchmark/v1.0.0/release/${basename}`;
+      map[key] = `https://raw.githubusercontent.com/Seek-Chat/deepseek-1m-context-benchmark/v1.0.0/release/${basename}`;
     }
   }
   return map;
@@ -514,11 +514,11 @@ test("release build reconciles rows, creates public data, charts, article templa
   assert.equal(templateArticle.description, SERP_META_DESCRIPTION);
   assert.deepEqual(templateArticle.author, { "@id": "{{AUTHOR_ID}}" });
   assert.deepEqual(templateArticle.publisher, { "@id": "{{PUBLISHER_ID}}" });
-  assert.deepEqual(templatePerson, { "@type": "Person", "@id": "{{AUTHOR_ID}}", name: "Chat Deep AI", url: "{{AUTHOR_ID}}" });
+  assert.deepEqual(templatePerson, { "@type": "Person", "@id": "{{AUTHOR_ID}}", name: "Seek-Chat", url: "{{AUTHOR_ID}}" });
   assert.equal(templateOrganization["@id"], "{{PUBLISHER_ID}}");
-  assert.equal(templateOrganization.name, "Chat-Deep.ai");
-  assert.equal(templateOrganization.url, "https://chat-deep.ai/");
-  assert.deepEqual(templateOrganization.logo, { "@type": "ImageObject", "@id": "https://chat-deep.ai/#logo", url: "https://chat-deep.ai/wp-content/uploads/2026/01/deep-ai-logo.png", contentUrl: "https://chat-deep.ai/wp-content/uploads/2026/01/deep-ai-logo.png", width: 765, height: 267 });
+  assert.equal(templateOrganization.name, "Seek-Chat");
+  assert.equal(templateOrganization.url, "https://seek-chat.com/");
+  assert.deepEqual(templateOrganization.logo, { "@type": "ImageObject", "@id": "https://seek-chat.com/#logo", url: "https://seek-chat.com/wp-content/uploads/2026/01/deep-ai-logo.png", contentUrl: "https://seek-chat.com/wp-content/uploads/2026/01/deep-ai-logo.png", width: 765, height: 267 });
   assert.equal(fs.readFileSync(path.join(output, "release", "all-attempts.csv"), "utf8").trim().split("\n").length, 345);
   const releaseReadme = fs.readFileSync(path.join(output, "release", "README.md"), "utf8");
   assert.doesNotMatch(releaseReadme, /pilot-us-\d{8}-\d{3}-retry\d+/i);
@@ -550,21 +550,21 @@ test("release build reconciles rows, creates public data, charts, article templa
   const map = validBindingMap(required);
   const mediaMap = path.join(root, "media-map.json");
   fs.writeFileSync(mediaMap, `${JSON.stringify(map, null, 2)}\n`);
-  const signedMap = { ...map, CH00_URL: "https://chat-deep.ai/chart.png?X-Amz-Signature=secret" };
+  const signedMap = { ...map, CH00_URL: "https://seek-chat.com/chart.png?X-Amz-Signature=secret" };
   const signedMapPath = path.join(root, "signed-map.json");
   fs.writeFileSync(signedMapPath, `${JSON.stringify(signedMap, null, 2)}\n`);
   const signedOutput = path.join(output, "wordpress-ready", "should-not-exist.html");
   assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap: signedMapPath, output: signedOutput }), /query string or signed token/);
   assert.equal(fs.existsSync(signedOutput), false);
   const injectionMapPath = path.join(root, "injection-map.json");
-  fs.writeFileSync(injectionMapPath, `${JSON.stringify({ ...map, CH00_URL: 'https://chat-deep.ai/wp-content/uploads/2026/08/chart.png" onerror="alert(1)' }, null, 2)}\n`);
+  fs.writeFileSync(injectionMapPath, `${JSON.stringify({ ...map, CH00_URL: 'https://seek-chat.com/wp-content/uploads/2026/08/chart.png" onerror="alert(1)' }, null, 2)}\n`);
   assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap: injectionMapPath, output: path.join(output, "wordpress-ready", "injection.html") }), /unsafe URL character/);
   const badDateMapPath = path.join(root, "bad-date-map.json");
   fs.writeFileSync(badDateMapPath, `${JSON.stringify({ ...map, DATE_MODIFIED: "2026-02-30" }, null, 2)}\n`);
   assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap: badDateMapPath, output: path.join(output, "wordpress-ready", "bad-date.html") }), /real ISO calendar date/);
   const wwwEntityMapPath = path.join(root, "www-entity-map.json");
-  fs.writeFileSync(wwwEntityMapPath, `${JSON.stringify({ ...map, AUTHOR_ID: "https://www.chat-deep.ai/author/caht-deep/" }, null, 2)}\n`);
-  assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap: wwwEntityMapPath, output: path.join(output, "wordpress-ready", "www-entity.html") }), /live chat-deep.ai Person entity URL/);
+  fs.writeFileSync(wwwEntityMapPath, `${JSON.stringify({ ...map, AUTHOR_ID: "https://www.seek-chat.com/author/caht-deep/" }, null, 2)}\n`);
+  assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap: wwwEntityMapPath, output: path.join(output, "wordpress-ready", "www-entity.html") }), /live seek-chat.com Person entity URL/);
   assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap, output: path.join(output, "outside-dedicated.html") }), /must be under wordpress-ready/);
   assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap, output: path.join(output, "gutenberg-draft.template.html") }), /must not overwrite/);
   const checksumsPath = path.join(output, "release", "checksums.sha256");
@@ -581,9 +581,9 @@ test("release build reconciles rows, creates public data, charts, article templa
   const readyArticle = readyGraph.find((node) => node["@type"] === "TechArticle");
   const readyPerson = readyGraph.find((node) => node["@type"] === "Person");
   const readyOrganization = readyGraph.find((node) => node["@type"] === "Organization");
-  assert.equal(readyPerson["@id"], "https://chat-deep.ai/author/caht-deep/");
+  assert.equal(readyPerson["@id"], "https://seek-chat.com/author/caht-deep/");
   assert.equal(readyPerson.url, readyPerson["@id"]);
-  assert.equal(readyOrganization["@id"], "https://chat-deep.ai/#organization");
+  assert.equal(readyOrganization["@id"], "https://seek-chat.com/#organization");
   assert.equal(readyArticle.author["@id"], readyPerson["@id"]);
   assert.equal(readyArticle.publisher["@id"], readyOrganization["@id"]);
   assert.throws(() => bindTemplate({ template: path.join(output, "gutenberg-draft.template.html"), mediaMap, output: ready }), /must not already exist/);
