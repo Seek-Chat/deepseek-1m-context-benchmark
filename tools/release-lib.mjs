@@ -148,7 +148,7 @@ const PRIVACY_PATTERNS = Object.freeze([
   ["aws_console_url", /https:\/\/[^\s"'<>]*console\.aws\.amazon\.com[^\s"'<>]*/gi],
   ["private_benchmark_resource_name", /\bchatdeep-context-benchmark(?:-[a-z0-9]+)+\b|\bchatdeep\/deepseek-1m-context-benchmark\/api-key\b/gi],
   ["workspace_absolute_path", /\b[A-Za-z]:\\Users\\[^\s"'<>]+|\/home\/[A-Za-z0-9._-]+\//g],
-  ["wordpress_private_url", /https?:\/\/chat-deep\.ai\/(?:wp-admin\/|[^\s"'<>]*[?&](?:preview|preview_id|preview_nonce)=)/gi],
+  ["wordpress_private_url", /https?:\/\/(?:chat-deep\.ai|seek-chat\.com)\/(?:wp-admin\/|[^\s"'<>]*[?&](?:preview|preview_id|preview_nonce)=)/gi],
   ["email_address", /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi],
   ["private_uuid", /\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b/gi],
   ["realistic_signed_url", /https?:\/\/[^\s"'<>]+[?&](?:X-Amz-Credential=[^&\s"'<>]+|X-Amz-Signature=[0-9a-f]{32,}|Signature=[A-Za-z0-9%+/_=-]{24,})/gi],
@@ -296,12 +296,12 @@ function validateRootDocuments(root, mode) {
   const readme = fs.readFileSync(path.join(root, "README.md"), "utf8");
   const localMarker = readme.includes("LOCAL SKELETON — NOT A DATA RELEASE");
   ensure(mode === "skeleton" ? localMarker : !localMarker, mode === "skeleton" ? "skeleton README lacks its publication blocker" : "ready README still says LOCAL SKELETON");
-  for (const token of [CONTRACT.protocolId, CONTRACT.protocolSha256, CONTRACT.calibrationSha256, "https://chat-deep.ai/research/deepseek-1m-context-benchmark/"]) {
+  for (const token of [CONTRACT.protocolId, CONTRACT.protocolSha256, CONTRACT.calibrationSha256, "https://seek-chat.com/research/deepseek-1m-context-benchmark/"]) {
     ensure(readme.includes(token), `README is missing contract token: ${token}`);
   }
 
   const mit = fs.readFileSync(path.join(root, "LICENSE"), "utf8");
-  ensure(mit.startsWith("MIT License\n") && mit.includes("Copyright (c) 2026 Chat Deep AI") && mit.includes("Permission is hereby granted, free of charge") && mit.includes('THE SOFTWARE IS PROVIDED "AS IS"'), "LICENSE is not the complete project MIT license");
+  ensure(mit.startsWith("MIT License\n") && mit.includes("Copyright (c) 2026 Seek-Chat") && mit.includes("Permission is hereby granted, free of charge") && mit.includes('THE SOFTWARE IS PROVIDED "AS IS"'), "LICENSE is not the complete project MIT license");
 
   const cc = fs.readFileSync(path.join(root, "LICENSE-DATA.md"), "utf8");
   for (const token of ["Creative Commons Attribution 4.0 International Public License", "Section 1 -- Definitions.", "Section 2 -- Scope.", "Section 3 -- License Conditions.", "Section 4 -- Sui Generis Database Rights.", "Section 5 -- Disclaimer of Warranties and Limitation of Liability.", "Section 6 -- Term and Termination.", "Section 7 -- Other Terms and Conditions.", "Section 8 -- Interpretation.", "Creative Commons may be contacted at creativecommons.org."]) {
@@ -310,7 +310,7 @@ function validateRootDocuments(root, mode) {
   ensure(cc.length > 15000, "LICENSE-DATA.md is unexpectedly short for full CC BY 4.0 legal code");
 
   const cff = fs.readFileSync(path.join(root, "CITATION.cff"), "utf8");
-  for (const token of ["cff-version: 1.2.0", "version: 1.0.0", "date-released: 2026-08-07", "repository-code: \"https://github.com/chatdeepai/deepseek-1m-context-benchmark\"", "license: CC-BY-4.0"]) {
+  for (const token of ["cff-version: 1.2.0", "version: 1.0.0", "date-released: 2026-08-07", "repository-code: \"https://github.com/Seek-Chat/deepseek-1m-context-benchmark\"", "license: CC-BY-4.0"]) {
     ensure(cff.includes(token), `CITATION.cff is missing: ${token}`);
   }
 }
